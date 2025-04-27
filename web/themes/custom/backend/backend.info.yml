@@ -1,0 +1,23 @@
+name: Backend
+type: theme
+description: 'Overrides "Gin" theme for the backend'
+core_version_requirement: ^10 || ^11
+libraries:
+  - claro/global-styling
+  - gin/gin
+
+base theme: gin
+
+# Regions (Overrides regions in theme Gin /themes/contrib/gin/gin.info.yml)
+regions:
+  header: 'Header'
+  pre_content: 'Pre-content'
+  breadcrumb: Breadcrumb
+  highlighted: Highlighted
+  help: Help
+  content: Content
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+  sidebar_first: 'First sidebar'
+regions_hidden:
+  - sidebar_first

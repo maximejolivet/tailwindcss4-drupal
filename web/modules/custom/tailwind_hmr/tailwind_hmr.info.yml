@@ -1,0 +1,5 @@
+name: Tailwind HMR (Hot Module Replacement)
+type: module
+description: 'Custom integration for Tailwind CSS with Vite HMR support.'
+core_version_requirement: ^10 || ^11
+package: Custom

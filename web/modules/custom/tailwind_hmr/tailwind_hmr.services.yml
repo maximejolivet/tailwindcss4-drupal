@@ -1,0 +1,3 @@
+services:
+  tailwind_hmr.library_alter:
+    class: Drupal\tailwind_hmr\TailwindLibraryAlter

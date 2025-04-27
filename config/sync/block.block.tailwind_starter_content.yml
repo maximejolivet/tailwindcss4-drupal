@@ -1,0 +1,22 @@
+uuid: a3d991c8-c2b5-4c92-9641-6aca5c637a59
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - tailwind_starter
+_core:
+  default_config_hash: hBHXB7hC05XU7pDYzETt-GUcpFlogK1gkjyAsg0Ym58
+id: tailwind_starter_content
+theme: tailwind_starter
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

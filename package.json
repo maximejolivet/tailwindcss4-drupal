@@ -1,0 +1,12 @@
+{
+  "name": "drupal",
+  "version": "0.0.1",
+  "title": "Drupal",
+  "description": "Starter Drupal 11, TailwindCSS 4 with Vite",
+  "site_url": "https://tailwind.lndo.site",
+  "scripts": {
+    "package": "npm --prefix ./web/themes/custom/tailwind i",
+    "dev": "npm --prefix ./web/themes/custom/tailwind run dev",
+    "build": "npm --prefix ./web/themes/custom/tailwind run build"
+  }
+}

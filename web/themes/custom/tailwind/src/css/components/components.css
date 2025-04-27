@@ -1,0 +1,50 @@
+@utility wrapper {
+  @apply px-5 sm:px-8 xl:px-16;
+}
+
+/* Titles Hn */
+
+@utility hero-title {
+  @apply font-secondary text-primary text-6xl lg:text-7xl;
+}
+
+@utility h1-title {
+  @apply font-secondary text-secondary text-5xl;
+}
+
+@utility h2-title {
+  @apply font-secondary text-4xl;
+}
+
+@utility h3-title {
+  @apply font-secondary text-3xl;
+}
+
+@utility h4-title {
+  @apply font-secondary text-2xl;
+}
+
+@utility h5-title {
+  @apply font-secondary text-xl;
+}
+
+@utility h6-title {
+  @apply font-secondary text-lg;
+}
+
+/* Boutons */
+@utility btn-primary {
+  @apply inline-flex flex-row items-center bg-primary border font-secondary p-4 text-white font-semibold rounded-full gap-2 no-underline transition-all duration-300 ease-in-out hover:bg-transparent hover:text-primary;
+
+  .icon {
+    @apply size-6 text-white fill-white;
+  }
+}
+
+@utility btn-secondary {
+  @apply inline-flex flex-row items-center bg-secondary border rounded-full font-secondary p-4 text-white font-medium gap-2 no-underline hover:bg-primary transition-all duration-300 ease-in-out;
+
+  .icon {
+    @apply size-6 text-white fill-white;
+  }
+}

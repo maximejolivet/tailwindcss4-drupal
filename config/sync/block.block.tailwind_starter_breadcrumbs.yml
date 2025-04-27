@@ -1,0 +1,22 @@
+uuid: 41ae5774-f299-4789-adf1-ec4c4e767158
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - tailwind_starter
+_core:
+  default_config_hash: y9X3xgCsO59pQyzNLzY1D3SDJJxCHILLWkpPnmuTJ2E
+id: tailwind_starter_breadcrumbs
+theme: tailwind_starter
+region: sidebar_first
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  label_display: '0'
+  provider: system
+visibility: {  }

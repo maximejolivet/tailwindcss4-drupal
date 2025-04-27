@@ -1,0 +1,20 @@
+uuid: 8a03b91d-8f39-47ca-b721-bea7cc36c648
+langcode: en
+status: true
+dependencies:
+  theme:
+    - tailwind_starter
+_core:
+  default_config_hash: HLQY2xgby8K3vN_98hiOSasOhm9pdCsH234-s0duJ8Q
+id: tailwind_starter_page_title
+theme: tailwind_starter
+region: header
+weight: -30
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

@@ -1,0 +1,54 @@
+name: tailwind
+recipe: drupal11
+config:
+  php: '8.4'
+  webroot: web
+  xdebug: false
+  via: apache
+  database: mariadb
+  composer_version: 2-latest
+
+# Access
+proxy:
+  appserver:
+    - tailwind.lndo.site
+  mailhog:
+    - mail.tailwind.lndo.site
+  pma:
+    - pma.tailwind.lndo.site
+
+# Additional services
+services:
+  node:
+    type: node:22
+    ports:
+      - 3009:3009
+  mailhog:
+    type: mailhog
+    hogfrom:
+      - appserver
+  pma:
+    type: phpmyadmin
+
+# Additionnal commands line "lando XXX"
+tooling:
+  drush:
+    cmd: /app/vendor/bin/drush
+  npm:
+    service: node
+  node:
+    service: node
+  yarn:
+    service: node
+  vite:
+    service: node
+    cmd: npm run dev
+  dev:
+    service: node
+    cmd: npm run dev
+  build:
+    service: node
+    cmd: npm run build
+  package:
+    service: node
+    cmd: npm run package

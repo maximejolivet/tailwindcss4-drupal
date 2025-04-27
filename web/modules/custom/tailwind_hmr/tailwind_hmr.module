@@ -1,0 +1,12 @@
+<?php
+
+declare(strict_types=1);
+
+/**
+ * Implements hook_library_info_alter().
+ */
+function tailwind_hmr_library_info_alter(array &$libraries, string $extension): void {
+  /** @var \Drupal\tailwind_hmr\TailwindLibraryAlter $alterService */
+  $alterService = \Drupal::service('tailwind_hmr.library_alter');
+  $alterService->alter($libraries, $extension);
+}
