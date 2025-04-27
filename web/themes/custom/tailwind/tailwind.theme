@@ -1,0 +1,11 @@
+<?php
+
+/**
+ * @file
+ * Functions to support theming.
+ */
+foreach (\glob(__DIR__ . '/includes/*.inc') as $filename) {
+  if (\str_ends_with($filename, '.inc') && \is_file($filename)) {
+    require_once $filename;
+  }
+}

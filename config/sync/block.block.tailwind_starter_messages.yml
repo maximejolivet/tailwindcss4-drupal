@@ -1,0 +1,22 @@
+uuid: de1c0e0f-b825-4829-82ee-5f54725a070d
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - tailwind_starter
+_core:
+  default_config_hash: WvPhI8OwllG0gE69-F8qL3ai3nd5SbYD6JpmEuZcyok
+id: tailwind_starter_messages
+theme: tailwind_starter
+region: sidebar_first
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  label_display: '0'
+  provider: system
+visibility: {  }

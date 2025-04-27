@@ -1,0 +1,71 @@
+uuid: aef608dc-aead-4038-9f68-7552380de6d6
+langcode: en
+status: true
+dependencies:
+  module:
+    - admin_toolbar_search
+    - block
+    - config
+    - file
+    - filter
+    - image
+    - media
+    - node
+    - path
+    - responsive_image
+    - system
+    - taxonomy
+    - toolbar
+    - views_ui
+id: administrator
+label: Administrator
+weight: -10
+is_admin: false
+permissions:
+  - 'access administration pages'
+  - 'access content overview'
+  - 'access files overview'
+  - 'access media overview'
+  - 'access site in maintenance mode'
+  - 'access taxonomy overview'
+  - 'access toolbar'
+  - 'access user profiles'
+  - 'administer blocks'
+  - 'administer content types'
+  - 'administer filters'
+  - 'administer image styles'
+  - 'administer media'
+  - 'administer media types'
+  - 'administer menu'
+  - 'administer modules'
+  - 'administer nodes'
+  - 'administer responsive images'
+  - 'administer taxonomy'
+  - 'administer url aliases'
+  - 'administer views'
+  - 'bypass node access'
+  - 'change own username'
+  - 'create media'
+  - 'create url aliases'
+  - 'delete all revisions'
+  - 'delete all taxonomy revisions'
+  - 'delete any file'
+  - 'delete any media'
+  - 'delete media'
+  - 'delete own files'
+  - 'export configuration'
+  - 'import configuration'
+  - 'revert all revisions'
+  - 'revert all taxonomy revisions'
+  - 'synchronize configuration'
+  - 'update any media'
+  - 'update media'
+  - 'use admin toolbar search'
+  - 'view all media revisions'
+  - 'view all revisions'
+  - 'view all taxonomy revisions'
+  - 'view own unpublished content'
+  - 'view own unpublished media'
+  - 'view the administration theme'
+  - 'view user email addresses'
+  - 'view vocabulary labels'

@@ -1,0 +1,22 @@
+uuid: c87c1f25-32d2-4f5b-9b2a-f1502f370e79
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - backend
+_core:
+  default_config_hash: hBHXB7hC05XU7pDYzETt-GUcpFlogK1gkjyAsg0Ym58
+id: backend_content
+theme: backend
+region: content
+weight: 0
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

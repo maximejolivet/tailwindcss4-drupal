@@ -1,0 +1,30 @@
+@import 'tailwindcss';
+@import './base/base.css';
+@import './components/components.css';
+
+@theme {
+  /* Colors */
+  --color-*: initial;
+  --color-primary: oklch(0.488 0.217 264.376);
+  --color-secondary: oklch(0.769 0.165 70.08);
+  --color-black: oklch(0.18 0 0);
+  --color-dark-grey: oklch(0.44 0 0);
+  --color-med-grey: oklch(0.62 0 0);
+  --color-light-grey: oklch(0.89 0 0);
+  --color-very-light-grey: oklch(0.98 0 0);
+  --color-white: oklch(1 0 0);
+  --color-overlay: oklch(0.18 0 0 / 30%);
+  --color-alert: oklch(0.57 0.2335 29.01);
+  --color-alert-light: oklch(0.95 0.0265 23.36);
+  --color-warning: oklch(0.67 0.1648 55.31);
+  --color-warning-light: oklch(0.97 0.0305 81.76);
+  --color-info: oklch(0.55 0.179255 254.7525);
+  --color-info-light: oklch(0.97 0.0209 227.52);
+  --color-success: oklch(0.52 0.1313 145.93);
+  --color-success-light: oklch(0.97 0.0538 149.27);
+
+  /* Fonts */
+  --font-*: initial;
+  --font-base: 'luciole', sans-serif;
+  --font-secondary: 'poppins', serif;
+}
