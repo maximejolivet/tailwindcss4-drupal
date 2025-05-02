@@ -12,10 +12,13 @@ config:
 proxy:
   appserver:
     - tailwind.lndo.site
+    - drupal.lndo.site
   mailhog:
     - mail.tailwind.lndo.site
+    - mail.drupal.lndo.site
   pma:
     - pma.tailwind.lndo.site
+    - pma.drupal.lndo.site
 
 # Additional services
 services:
