@@ -2,7 +2,7 @@
 theme:
   css:
     layout:
-      dist/css/tailwind.css: { weight: 50, media: "screen" }
+      dist/tailwind.css: { weight: 50, media: "screen" }
   dependencies:
     - core/jquery
     - core/js-cookie

@@ -1,18 +1,30 @@
 import {defineConfig, loadEnv} from "vite";
 import tailwindcss from "@tailwindcss/vite";
 import liveReload from "vite-plugin-live-reload";
-import updateReload from "./plugins/update.config.mjs";
+import updateConfig from "./plugins/update.config.mjs";
 import path from "path";
 import fs from 'fs';
 
 export default defineConfig(({mode}) => {
   const env = loadEnv(mode, path.resolve(__dirname, "../../../.."), "");
 
+  function excludeReloadStyles() {
+    return {
+      name: "exclude-css-folder",
+      generateBundle() {
+        const cssPath = path.resolve(__dirname, "dist/css");
+        if (fs.existsSync(cssPath)) {
+          fs.rmSync(cssPath, { recursive: true, force: true });
+        }
+      }
+    };
+  }
+
   return {
     plugins: [
       tailwindcss(),
       liveReload(__dirname + "/**/*.(php|inc|includes|twig)"),
-      updateReload(),
+      excludeReloadStyles(),
     ],
 
     publicDir: "src",
@@ -27,7 +39,6 @@ export default defineConfig(({mode}) => {
         },
         output: {
           assetFileNames: ({name}) => {
-            if (/\.(css)$/.test(name ?? "")) return "css/[name][extname]"
             return "[name][extname]"; // Default fallback
           },
           sourcemap: mode === "development"
