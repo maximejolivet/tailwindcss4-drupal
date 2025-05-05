@@ -2,3 +2,5 @@ services:
   Drupal\tailwind_hmr\Hook\LibraryHooks:
     class: Drupal\tailwind_hmr\Hook\LibraryHooks
     autowire: true
+    #parameters:
+      #tailwind_hmr.hooks_converted: true
