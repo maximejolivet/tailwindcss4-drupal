@@ -1,43 +1,41 @@
 <?php
+namespace Drupal\tailwind_hmr\Hook;
 
-declare(strict_types=1);
-
-namespace Drupal\tailwind_hmr;
-
+use Drupal\Core\Hook\Attribute\Hook;
 use Drupal\Core\Site\Settings;
 
 /**
- * Service to alter Tailwind's libraries.
+ * Provides hook implementations for library alterations.
  */
-final class TailwindLibraryAlter {
+class LibraryHooks {
 
   /**
-   * Alters the libraries if required.
+   * Alters the libraries defined by an extension.
    *
    * @param array $libraries
-   *   Reference to the libraries array.
+   *   The libraries provided by the extension, keyed by internal library name.
    * @param string $extension
-   *   The extension name.
+   *   The name of the extension that owns the libraries.
    */
-  public function alter(array &$libraries, string $extension): void {
-    if ($extension !== 'tailwind') {
-      return;
-    }
-
-    if (Settings::get('hot_module_replacement')) {
-      foreach ($libraries as &$settings) {
-        if (isset($settings['js']) && is_array($settings['js'])) {
-          foreach ($settings['js'] as $path => $options) {
-            $this->replaceAsset($settings['js'], $path, $options);
+  #[Hook('library_info_alter')]
+  public static function libraryInfoAlter(array &$libraries, string $extension): void {
+    if ($extension === 'tailwind') {
+      if (Settings::get('hot_module_replacement')) {
+        foreach ($libraries as &$settings) {
+          if (isset($settings['js']) && is_array($settings['js'])) {
+            foreach ($settings['js'] as $path => $options) {
+              (new LibraryHooks)->replaceAsset($settings['js'], $path, $options);
+            }
           }
         }
+        unset($settings);
       }
-      unset($settings);
-    }
-    else {
-      unset($libraries['hot-module-replacement']);
+      else {
+        unset($libraries['hot-module-replacement']);
+      }
     }
   }
+
 
   /**
    * Replaces an asset path with a Vite-compatible one.
@@ -70,5 +68,4 @@ final class TailwindLibraryAlter {
     $newPath = "{$dir}/{$path}";
     $library[$newPath] = $options;
   }
-
 }

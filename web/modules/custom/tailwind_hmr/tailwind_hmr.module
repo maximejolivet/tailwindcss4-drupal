@@ -3,10 +3,16 @@
 declare(strict_types=1);
 
 /**
+ * @file
+ * Contains \Drupal\tailwind_hmr\Hook\LibraryHooks.
+ *
+ * @see \Drupal\tailwind_hmr\Hook\LibraryHooks
+ */
+use Drupal\tailwind_hmr\Hook\LibraryHooks;
+
+/**
  * Implements hook_library_info_alter().
  */
 function tailwind_hmr_library_info_alter(array &$libraries, string $extension): void {
-  /** @var \Drupal\tailwind_hmr\TailwindLibraryAlter $alterService */
-  $alterService = \Drupal::service('tailwind_hmr.library_alter');
-  $alterService->alter($libraries, $extension);
+  \Drupal::service(LibraryHooks::class)->libraryInfoAlter($libraries, $extension);
 }

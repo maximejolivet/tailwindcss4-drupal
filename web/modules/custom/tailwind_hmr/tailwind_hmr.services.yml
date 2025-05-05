@@ -1,3 +1,4 @@
 services:
-  tailwind_hmr.library_alter:
-    class: Drupal\tailwind_hmr\TailwindLibraryAlter
+  Drupal\tailwind_hmr\Hook\LibraryHooks:
+    class: Drupal\tailwind_hmr\Hook\LibraryHooks
+    autowire: true
