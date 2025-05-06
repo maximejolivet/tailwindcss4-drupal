@@ -13,6 +13,7 @@ theme:
 hot-module-replacement:
   header: true
   js:
-    http://localhost:3009/@vite/client: { type: external, attributes: { type: "module" } }
+    # Vite HMR
+    /@vite/client: { type: external, attributes: { type: "module" } }
     # Initial Tailwind CSS
-    src/css/tailwind.css: { attributes: { type: "module" } }
+    /src/css/tailwind.css: { attributes: { type: "module" } }

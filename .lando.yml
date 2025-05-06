@@ -7,6 +7,8 @@ config:
   via: apache
   database: mariadb
   composer_version: 2-latest
+  env_file:
+    - .env
 
 # Access
 proxy:

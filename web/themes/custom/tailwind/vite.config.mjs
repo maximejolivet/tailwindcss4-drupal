@@ -49,12 +49,12 @@ export default defineConfig(({mode}) => {
     server: {
       host: true,                          // Listen on all interfaces
       https: false,                        // Use HTTP for dev server
-      origin: env.VITE_SERVER_HOST,        // Dev server origin for HMR
+      origin: env.VITE_SERVER_ORIGIN,      // Dev server origin for HMR
       cors: true,                          // laAllow cross-origin requests
       strictPort: false,                   // Don’t fail if port is already taken
       port: env.VITE_SERVER_PORT,          // Dev server port
       hmr: {
-        host: "localhost",                 // Host for Hot Module Replacement
+        host: env.VITE_SERVER_HOST,        // Host for Hot Module Replacement
         protocol: "ws",                    // Use WebSocket protocol for HMR
       },
       allowedHosts: [".lndo.site"],        // Allow specific dev domains (e.g. Lando)
