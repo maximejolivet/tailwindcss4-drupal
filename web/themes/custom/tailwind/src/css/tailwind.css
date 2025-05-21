@@ -22,4 +22,9 @@
   --color-info-light: oklch(0.97 0.0209 227.52);
   --color-success: oklch(0.52 0.1313 145.93);
   --color-success-light: oklch(0.97 0.0538 149.27);
+
+  /* Fonts */
+  --font-*: initial;
+  --font-base: 'luciole', sans-serif;
+  --font-secondary: 'roboto', serif;
 }
