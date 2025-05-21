@@ -22,6 +22,7 @@
         "drupal/dotenv": "^1.2",
         "drupal/gin": "^4.0",
         "drupal/masquerade": "^2.0",
+        "drupal/webprofiler": "^11.1",
         "drush/drush": "^13.5"
     },
     "conflict": {

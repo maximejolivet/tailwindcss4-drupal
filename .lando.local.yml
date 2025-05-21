@@ -1,0 +1,7 @@
+keys: false
+services:
+  node:
+    overrides:
+      build:
+        context: .
+        dockerfile: docker/Dockerfile.x64
