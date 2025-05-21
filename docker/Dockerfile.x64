@@ -1,0 +1,12 @@
+# For users to MacOS : M1, M2, M3 with arm64
+# Force x64 architecture like on Linux
+
+FROM --platform=linux/amd64 node:22
+
+# Set the working directory
+WORKDIR /app
+COPY . .
+
+# Install system dependencies
+# Install NPM dependencies
+RUN npm install

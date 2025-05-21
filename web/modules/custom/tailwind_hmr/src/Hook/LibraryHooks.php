@@ -49,20 +49,24 @@ final class LibraryHooks {
    *   Additional asset options.
    */
   private static function replaceAsset(array &$library, string $path, array $options, bool $hmr): void {
-    if (preg_match('/^(http|:\/\/)/', $path)) {
+    if (preg_match('/^(https|:\/\/)/', $path)) {
       return;
     }
 
     unset($library[$path]);
-    $dir = $hmr ? 'http://localhost:'.$_ENV['VITE_SERVER_PORT'] ?? '3009' : 'dist';
+    $host = $_ENV['VITE_SERVER_HOST'] ?? 'localhost';
+    $port = $_ENV['VITE_SERVER_PORT'] ?? '3009';
+    $dir = "https://{$host}:{$port}";
 
     if ($hmr) {
       $options += ['type' => 'external'];
-      if (str_ends_with($path, '.js') || str_ends_with($path, '.mjs')) {
+      if (preg_match('/\.m?js$/', $path)) {
         $options['crossorigin'] = true;
+        $library["{$dir}/{$path}"] = $options;
+      }
+      else {
+        $library["{$dir}{$path}"] = $options;
       }
     }
-
-    $library["{$dir}{$path}"] = $options;
   }
 }
