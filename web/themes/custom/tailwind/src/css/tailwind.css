@@ -25,6 +25,5 @@
 
   /* Fonts */
   --font-*: initial;
-  --font-base: 'luciole', sans-serif;
-  --font-secondary: 'roboto', serif;
+  --font-base: 'Luciole', sans-serif;
 }
