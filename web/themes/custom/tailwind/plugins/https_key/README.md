@@ -1,12 +1,12 @@
 ## Certificat SSL local :
 
-Expire le 22 août 2027 🗓
+Memo: Expires August 24, 2027 🗓
 
 ```yaml
 mkcert localhost
 ```
-Cela génère deux fichiers dans le répertoire courant :
+This generates two files in the current directory:
 
-**localhost.pem** → le certificat public (à utiliser comme cert)
+**localhost.pem** → the public certificate (to be used as cert)
 
-**localhost-key.pem** → la clé privée (à utiliser comme key)
+**localhost-key.pem** → the private key (to be used as key)
