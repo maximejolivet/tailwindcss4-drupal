@@ -12,9 +12,9 @@ export default defineConfig(({mode}) => {
   return {
     plugins: [
       tailwindcss(),
-      liveReload(__dirname + "/**/*.(php|inc|includes|twig)"),
       updateJs(),
       excludeAllCssExcept(),
+      liveReload(__dirname + "/**/*.(php|inc|includes|twig)"),
     ],
 
     publicDir: "src",
