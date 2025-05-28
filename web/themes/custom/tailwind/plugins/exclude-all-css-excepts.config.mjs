@@ -7,7 +7,8 @@ export default function excludeAllCssExcept() {
     generateBundle() {
       const cssDir = path.resolve(__dirname, '../dist/css');
       const allowedFiles = [
-        'fonts.css'
+        'fonts.css',
+        'ckeditor.css',
       ]; // List of files to keep
 
       if (fs.existsSync(cssDir)) {

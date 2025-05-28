@@ -21,5 +21,8 @@ regions:
 regions_hidden:
   - sidebar_first
 
+ckeditor5-stylesheets:
+  - dist/css/ckeditor.css
+
 "interface translation project": tailwind
 "interface translation server pattern": themes/custom/tailwind/translations/%project.%language.po
