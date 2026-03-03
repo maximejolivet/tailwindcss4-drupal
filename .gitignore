@@ -30,3 +30,4 @@
 # Remove the line below and commit the files for more granular control.
 **/.gitignore
 /.idea
+*.gz
