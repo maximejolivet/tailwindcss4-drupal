@@ -8,7 +8,8 @@ use Drupal\Core\Site\Settings;
 /**
  * Provides hook implementations for library alterations.
  */
-final class LibraryHooks {
+final class LibraryHooks
+{
 
   /**
    * Alters the libraries defined by an extension.
@@ -19,7 +20,8 @@ final class LibraryHooks {
    *   The name of the extension that owns the libraries.
    */
   #[Hook('library_info_alter')]
-  public static function libraryInfoAlter(array &$libraries, string $extension): void {
+  public static function libraryInfoAlter(array &$libraries, string $extension): void
+  {
     if ($extension !== 'tailwind') {
       return;
     }
@@ -48,7 +50,8 @@ final class LibraryHooks {
    * @param array $options
    *   Additional asset options.
    */
-  private static function replaceAsset(array &$library, string $path, array $options, bool $hmr): void {
+  private static function replaceAsset(array &$library, string $path, array $options, bool $hmr): void
+  {
     if (preg_match('/^(https|:\/\/)/', $path)) {
       return;
     }
@@ -63,8 +66,7 @@ final class LibraryHooks {
       if (preg_match('/\.m?js$/', $path)) {
         $options['crossorigin'] = true;
         $library["{$dir}/{$path}"] = $options;
-      }
-      else {
+      } else {
         $library["{$dir}{$path}"] = $options;
       }
     }

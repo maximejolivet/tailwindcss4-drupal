@@ -1,6 +1,6 @@
-## Environnement MacOs
+macOS Environment
 
-Création du fichier `.lando.local.yml` à la racine pour configurer le service `node` de lando en node x64:
+Create a file named .lando.local.yml at the root of your project to configure the Lando node service to use Node x64 :
 
 ```yaml
 services:
