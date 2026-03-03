@@ -60,6 +60,8 @@ client:912 // [vite] connected.
 theme.js:20 // 🚀 Theme Libraries loaded
 ```
 
+In your IDE, you should see this when you edit the /src/css files
+
 ```js
 ➜ tailwindcss4-drupal git:(master) ✗ lando dev
 
@@ -81,3 +83,5 @@ Instead of /src/css/tailwind.css, use /css/tailwind.css.
 Files in the public directory are served at the root path.
 Instead of /src/css/tailwind.css, use /css/tailwind.css.
 ```
+
+The page needs to reload with the HMR changes
