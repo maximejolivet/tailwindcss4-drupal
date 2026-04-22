@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   module:
-    - admin_toolbar_search
     - block
     - config
     - file
@@ -55,12 +54,12 @@ permissions:
   - 'delete own files'
   - 'export configuration'
   - 'import configuration'
+  - 'rebuild node access permissions'
   - 'revert all revisions'
   - 'revert all taxonomy revisions'
   - 'synchronize configuration'
   - 'update any media'
   - 'update media'
-  - 'use admin toolbar search'
   - 'view all media revisions'
   - 'view all revisions'
   - 'view all taxonomy revisions'
