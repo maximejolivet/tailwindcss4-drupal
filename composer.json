@@ -17,11 +17,18 @@
     "require": {
         "composer/installers": "^2.3",
         "drupal/admin_toolbar": "^3.5",
+        "drupal/better_exposed_filters": "^7.1",
         "drupal/core-composer-scaffold": "^11.1",
         "drupal/core-recommended": "^11.1",
         "drupal/dotenv": "^1.2",
         "drupal/gin": "^5.0",
+        "drupal/gin_toolbar": "^3.0",
         "drupal/masquerade": "^2.0",
+        "drupal/metatag": "^2.2",
+        "drupal/paragraphs": "^1.20",
+        "drupal/pathauto": "^1.14",
+        "drupal/redirect": "^1.13",
+        "drupal/token": "^1.17",
         "drupal/webprofiler": "^11.1",
         "drush/drush": "^13.5"
     },
