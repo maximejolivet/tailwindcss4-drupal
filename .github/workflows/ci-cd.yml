@@ -45,7 +45,7 @@ jobs:
   deploy:
     name: Deploy to o2switch
     needs: ci
-    if: github.ref == 'refs/heads/deploy' && github.event_name == 'push'
+    if: github.ref == 'refs/heads/deploy'
     runs-on: ubuntu-latest
     environment: production
     steps:
