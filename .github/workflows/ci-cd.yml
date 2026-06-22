@@ -85,6 +85,11 @@ jobs:
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
+      # Récupérer l'IP publique du runner GitHub
+      - name: Get runner's public IP
+        id: ip
+        uses: haythem/public-ip@v1.3
+
       - name: Deploy - git pull, composer install, drush update
         env:
           SSH_HOST: ${{ secrets.SSH_HOST }}
@@ -99,7 +104,7 @@ jobs:
             git fetch origin deploy
             git reset --hard origin/deploy
             export COMPOSER_MEMORY_LIMIT=-1
-            "$PHP_BIN" -d memory_limit=-1 \$(which composer) install --no-dev --optimize-autoloader --no-progress --no-interaction
+            \$(which composer) install --no-dev --optimize-autoloader --no-progress --no-interaction
             "$PHP_BIN" vendor/bin/drush updatedb -y
             "$PHP_BIN" vendor/bin/drush config:import -y
             "$PHP_BIN" vendor/bin/drush cache:rebuild
