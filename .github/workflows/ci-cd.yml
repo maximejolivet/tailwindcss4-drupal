@@ -51,6 +51,22 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Debug variables
+        env:
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_USER: ${{ secrets.SSH_USER }}
+          SSH_PORT: ${{ secrets.SSH_PORT }}
+          PROJECT_PATH: ${{ secrets.PROJECT_PATH }}
+          PHP_BIN: ${{ secrets.PHP_BIN }}
+        run: |
+          echo "console.log(SSH_HOST)      => $SSH_HOST"
+          echo "console.log(SSH_USER)      => $SSH_USER"
+          echo "console.log(SSH_PORT)      => $SSH_PORT"
+          echo "console.log(PROJECT_PATH)  => $PROJECT_PATH"
+          echo "console.log(PHP_BIN)       => $PHP_BIN"
+          echo "console.log(github.ref)    => ${{ github.ref }}"
+          echo "console.log(event_name)    => ${{ github.event_name }}"
+
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
