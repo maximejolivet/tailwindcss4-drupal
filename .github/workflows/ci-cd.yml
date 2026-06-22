@@ -1,0 +1,116 @@
+name: CI/CD
+
+on:
+  push:
+    branches: ['**']
+  pull_request:
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          tools: composer:2
+          coverage: none
+
+      - name: Validate composer.json
+        run: composer validate --strict --no-check-all
+
+      - name: Get composer cache directory
+        id: composer-cache
+        run: echo "dir=$(composer config cache-files-dir)" >> "$GITHUB_OUTPUT"
+
+      - name: Cache composer dependencies
+        uses: actions/cache@v4
+        with:
+          path: ${{ steps.composer-cache.outputs.dir }}
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+          restore-keys: ${{ runner.os }}-composer-
+
+      - name: Install dependencies
+        run: composer install --no-progress --prefer-dist
+
+      - name: PHP CodeSniffer (Drupal + DrupalPractice)
+        run: vendor/bin/phpcs --standard=phpcs.xml web/modules/custom web/themes/custom
+
+      - name: PHPUnit
+        if: hashFiles('phpunit.xml', 'phpunit.xml.dist') != ''
+        run: vendor/bin/phpunit
+
+  deploy:
+    name: Deploy to o2switch
+    needs: ci
+    if: github.ref == 'refs/heads/deploy' && github.event_name == 'push'
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+          cache-dependency-path: web/themes/custom/tailwind/package-lock.json
+
+      - name: Build theme assets
+        working-directory: web/themes/custom/tailwind
+        run: |
+          npm ci
+          npm run build
+
+      - name: Start SSH agent
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Add server to known_hosts
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan -p ${{ secrets.SSH_PORT }} ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+
+      - name: Deploy - git pull, composer install, drush update
+        env:
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_USER: ${{ secrets.SSH_USER }}
+          SSH_PORT: ${{ secrets.SSH_PORT }}
+          PROJECT_PATH: ${{ secrets.PROJECT_PATH }}
+          PHP_BIN: ${{ secrets.PHP_BIN }}
+        run: |
+          ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" bash -s << ENDSSH
+            set -euo pipefail
+            cd "$PROJECT_PATH"
+            git fetch origin deploy
+            git reset --hard origin/deploy
+            export COMPOSER_MEMORY_LIMIT=-1
+            "$PHP_BIN" -d memory_limit=-1 \$(which composer) install --no-dev --optimize-autoloader --no-progress --no-interaction
+            "$PHP_BIN" vendor/bin/drush updatedb -y
+            "$PHP_BIN" vendor/bin/drush config:import -y
+            "$PHP_BIN" vendor/bin/drush cache:rebuild
+          ENDSSH
+
+      - name: Upload built theme assets
+        env:
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_USER: ${{ secrets.SSH_USER }}
+          SSH_PORT: ${{ secrets.SSH_PORT }}
+          PROJECT_PATH: ${{ secrets.PROJECT_PATH }}
+        run: |
+          scp -P "$SSH_PORT" -r web/themes/custom/tailwind/dist \
+            "$SSH_USER@$SSH_HOST:$PROJECT_PATH/web/themes/custom/tailwind/"
+
+      - name: Clear cache after asset upload
+        env:
+          SSH_HOST: ${{ secrets.SSH_HOST }}
+          SSH_USER: ${{ secrets.SSH_USER }}
+          SSH_PORT: ${{ secrets.SSH_PORT }}
+          PROJECT_PATH: ${{ secrets.PROJECT_PATH }}
+          PHP_BIN: ${{ secrets.PHP_BIN }}
+        run: |
+          ssh -p "$SSH_PORT" "$SSH_USER@$SSH_HOST" \
+            "cd $PROJECT_PATH && $PHP_BIN vendor/bin/drush cache:rebuild"

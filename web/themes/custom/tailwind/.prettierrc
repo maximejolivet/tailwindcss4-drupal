@@ -2,7 +2,7 @@
   "plugins": [
     "prettier-plugin-tailwindcss"
   ],
-  "tailwindStylesheet": "./src/tailwind.css",
+  "tailwindStylesheet": "./src/css/tailwind.css",
   "trailingComma": "es5",
   "tabWidth": 2,
   "semi": true,
