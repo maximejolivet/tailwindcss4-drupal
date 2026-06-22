@@ -6,8 +6,12 @@ import excludeAllCssExcept from './plugins/exclude-all-css-excepts.config.mjs';
 import path from "path";
 import fs from 'fs';
 
-export default defineConfig(({mode}) => {
+export default defineConfig(({mode, command}) => {
   const env = loadEnv(mode, path.resolve(__dirname, "../../../.."), "");
+
+  const keyPath = path.resolve(__dirname, 'plugins/https_key/localhost-key.pem');
+  const certPath = path.resolve(__dirname, 'plugins/https_key/localhost.pem');
+  const hasHttpsCerts = fs.existsSync(keyPath) && fs.existsSync(certPath);
 
   return {
     plugins: [
@@ -43,10 +47,10 @@ export default defineConfig(({mode}) => {
 
     server: {
       host: true, // Listen on all interfaces
-      https: { // Enable HTTPS with self-signed certificate
-        key: fs.readFileSync('./plugins/https_key/localhost-key.pem'),
-        cert: fs.readFileSync('./plugins/https_key/localhost.pem'),
-      },
+      https: command === 'serve' && hasHttpsCerts ? { // Enable HTTPS with self-signed certificate, when available
+        key: fs.readFileSync(keyPath),
+        cert: fs.readFileSync(certPath),
+      } : undefined,
       origin: env.VITE_SERVER_ORIGIN, // Dev server origin for HMR
        cors: {
          origin: ['https://localhost:3009', env.VITE_SERVER_ORIGIN], // Allow CORS for the specified origin
