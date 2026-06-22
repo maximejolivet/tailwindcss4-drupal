@@ -91,5 +91,8 @@
                 "type:drupal-recipe"
             ]
         }
+    },
+    "require-dev": {
+        "drupal/coder": "^9.0"
     }
 }
