@@ -57,6 +57,10 @@ export default defineConfig(({mode}) => {
         host: env.VITE_SERVER_HOST, // Host for Hot Module Replacement
         protocol: 'wss', // Use WebSocket protocol for HMR
       },
+      watch: {
+        usePolling: true, // Docker on macOS doesn't reliably forward inotify events through the bind mount
+        interval: 100,
+      },
     },
   };
 });
