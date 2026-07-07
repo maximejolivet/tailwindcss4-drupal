@@ -1,0 +1,75 @@
+services:
+  traefik:
+    image: traefik:v3.5
+    command:
+      - --providers.file.directory=/etc/traefik/dynamic
+      - --providers.file.watch=true
+      - --entrypoints.web.address=:80
+      - --entrypoints.websecure.address=:443
+      - --entrypoints.web.http.redirections.entrypoint.to=websecure
+      - --entrypoints.web.http.redirections.entrypoint.scheme=https
+    ports:
+      - '80:80'
+      - '443:443'
+    volumes:
+      - ./docker/traefik/dynamic:/etc/traefik/dynamic:ro
+      - ./docker/traefik/certs:/etc/traefik/certs:ro
+    networks:
+      - drupal
+
+  php:
+    build:
+      context: ./docker/apache
+    volumes:
+      - .:/var/www/html
+    env_file:
+      - .env
+    depends_on:
+      - database
+    networks:
+      - drupal
+
+  database:
+    image: mariadb:11
+    environment:
+      MARIADB_DATABASE: ${MYSQL_DATABASE}
+      MARIADB_USER: ${MYSQL_USER}
+      MARIADB_PASSWORD: ${MYSQL_PASSWORD}
+      MARIADB_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-root}
+    volumes:
+      - db-data:/var/lib/mysql
+    networks:
+      - drupal
+
+  node:
+    image: node:22
+    working_dir: /var/www/html
+    volumes:
+      - .:/var/www/html
+    env_file:
+      - .env
+    ports:
+      - '3009:3009'
+    command: npm run dev
+    networks:
+      - drupal
+
+  phpmyadmin:
+    image: phpmyadmin:5
+    environment:
+      PMA_HOST: database
+    depends_on:
+      - database
+    networks:
+      - drupal
+
+  mailhog:
+    image: mailhog/mailhog:v1.0.1
+    networks:
+      - drupal
+
+networks:
+  drupal:
+
+volumes:
+  db-data:

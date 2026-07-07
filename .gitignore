@@ -22,6 +22,16 @@
 # Ignore .env files as they could contain sensitive information.
 /.env
 
+# Ignore locally-generated mkcert TLS certificates for Traefik.
+/docker/traefik/certs/*.pem
+
+# Ignore locally-generated mkcert TLS certificate for the Vite dev server.
+/web/themes/custom/tailwind/plugins/https_key/*.pem
+
+# Ignore Node.js dependencies and built theme assets.
+/web/themes/custom/tailwind/node_modules/
+/web/themes/custom/tailwind/dist/
+
 # Manage .gitattributes with Drupal scaffold for cross-platform compatibility.
 # Remove the line below and commit the file for more granular control.
 /.gitattributes
