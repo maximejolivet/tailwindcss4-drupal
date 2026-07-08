@@ -893,8 +893,9 @@ if (!isset($_ENV['APP_ENV'])) {
   exit("Need to set 'APP_ENV' environment variable");
 }
 
-if (file_exists($app_root . '/' . $site_path . '/settings.' . $_ENV['APP_ENV'] . '.php')) {
-  include $app_root . '/' . $site_path . '/settings.' . $_ENV['APP_ENV'] . '.php';
+$environment_settings_file = $app_root . '/' . $site_path . '/settings.' . $_ENV['APP_ENV'] . '.php';
+if ($environment_settings_file !== __FILE__ && file_exists($environment_settings_file)) {
+  include $environment_settings_file;
 }
 $databases['default']['default'] = array (
   'database' => 'drupal11',
@@ -908,4 +909,5 @@ $databases['default']['default'] = array (
   'namespace' => 'Drupal\\mysql\\Driver\\Database\\mysql',
   'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
 );
+$settings['hot_module_replacement'] = TRUE;
 $settings['config_sync_directory'] = '../config/sync';
