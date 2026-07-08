@@ -18,6 +18,7 @@
     };
 
     console.info('🚀 Theme Libraries loaded');
+    //alert('🚀 Theme Libraries loaded');
     return this;
   };
 

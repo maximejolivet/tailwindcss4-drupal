@@ -50,7 +50,7 @@ services:
       - .env
     ports:
       - '3009:3009'
-    command: npm run dev
+    command: tail -f /dev/null
     networks:
       - drupal
 
