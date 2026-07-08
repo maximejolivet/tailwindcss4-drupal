@@ -1,4 +1,4 @@
-.PHONY: start stop restart restart-traefik status logs dockhand-register package dev build drush
+.PHONY: start stop restart restart-traefik status logs dockhand-register composer certs package dev build drush
 
 # Base docker compose invocation: compose file lives in docker/, but the
 # project directory stays the repo root so bind mounts (e.g. .:/var/www/html)
@@ -32,6 +32,14 @@ logs:
 # Register this stack in Dockhand.
 dockhand-register:
 	./docker/dockhand-register.sh
+
+# Run Composer commands (php service). Usage: `make composer install`.
+composer:
+	$(COMPOSE) exec php composer $(filter-out $@,$(MAKECMDGOALS))
+
+# Generate a local SSL certificate with mkcert (host, not a container).
+certs:
+	cd web/themes/custom/tailwind/plugins/https_key && mkcert localhost
 
 # Install Node.js dependencies for the theme (node service).
 package:
