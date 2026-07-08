@@ -43,6 +43,9 @@ export default defineConfig(({mode}) => {
 
     server: {
       host: true, // Listen on all interfaces
+      watch: {
+        usePolling: true, // Bind-mounted volume doesn't forward inotify events into the container
+      },
       https: { // Enable HTTPS with self-signed certificate
         key: fs.readFileSync('./plugins/https_key/localhost-key.pem'),
         cert: fs.readFileSync('./plugins/https_key/localhost.pem'),

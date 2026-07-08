@@ -1,22 +1,55 @@
-.PHONY: start stop restart restart-traefik status logs dockhand-register
+.PHONY: start stop restart restart-traefik status logs dockhand-register package dev build drush
 
+# Base docker compose invocation: compose file lives in docker/, but the
+# project directory stays the repo root so bind mounts (e.g. .:/var/www/html)
+# resolve correctly.
+COMPOSE = docker compose -f docker/docker-compose.yml --project-directory .
+
+# Start all containers in the background.
 start:
-	docker compose up -d
+	colima start && $(COMPOSE) up -d
 
+# Stop all containers without removing them.
 stop:
-	docker compose stop
+	colima stop && $(COMPOSE) stop
 
+# Restart all containers.
 restart:
-	docker compose restart
+	colima start && $(COMPOSE) restart
 
+# Restart only Traefik (e.g. after editing dynamic config or certs).
 restart-traefik:
-	docker compose restart traefik
+	$(COMPOSE) restart traefik
 
+# Show container status.
 status:
-	docker compose ps
+	$(COMPOSE) ps
 
+# Follow logs for all containers.
 logs:
-	docker compose logs -f
+	$(COMPOSE) logs -f
 
+# Register this stack in Dockhand.
 dockhand-register:
 	./docker/dockhand-register.sh
+
+# Install Node.js dependencies for the theme (node service).
+package:
+	$(COMPOSE) exec node npm run package
+
+# Start the Vite dev server with HMR (node service).
+dev:
+	$(COMPOSE) exec node npm run dev
+
+# Build the theme assets for production (node service).
+build:
+	$(COMPOSE) exec node npm run build
+
+# Run Drush commands (php service). Usage: `make drush <command>`.
+drush:
+	$(COMPOSE) exec php vendor/bin/drush $(filter-out $@,$(MAKECMDGOALS))
+
+# Swallow extra arguments passed to `make drush ...` so make doesn't try
+# to treat them as targets of their own.
+%:
+	@:
