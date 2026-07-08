@@ -1,0 +1,4 @@
+tls:
+  certificates:
+    - certFile: /etc/traefik/certs/tailwind.localhost.pem
+      keyFile: /etc/traefik/certs/tailwind.localhost-key.pem
