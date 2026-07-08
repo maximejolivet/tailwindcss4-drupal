@@ -15,6 +15,7 @@
         }
     ],
     "require": {
+        "php": ">=8.3",
         "composer/installers": "^2.3",
         "drupal/admin_toolbar": "^3.5",
         "drupal/better_exposed_filters": "^7.1",
@@ -45,7 +46,12 @@
             "dealerdirect/phpcodesniffer-composer-installer": true,
             "php-http/discovery": true
         },
-        "sort-packages": true
+        "sort-packages": true,
+        "policy": {
+            "advisories": {
+                "ignore-id": {}
+            }
+        }
     },
     "extra": {
         "drupal-scaffold": {
@@ -85,5 +91,8 @@
                 "type:drupal-recipe"
             ]
         }
+    },
+    "require-dev": {
+        "drupal/coder": "^9.0"
     }
 }

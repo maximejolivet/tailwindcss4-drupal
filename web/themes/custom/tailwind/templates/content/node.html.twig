@@ -70,28 +70,27 @@
     view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
   ]
 %}
-{{ attach_library('starterkit_theme/node') }}
 <article{{ attributes.addClass(classes) }}>
 
   {{ title_prefix }}
   {% if label and not page %}
-    <h2{{ title_attributes }}>
-      <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+    <h2{{ title_attributes.addClass('mb-3 text-2xl font-bold text-black') }}>
+      <a href="{{ url }}" rel="bookmark" class="hover:text-primary transition-colors">{{ label }}</a>
     </h2>
   {% endif %}
   {{ title_suffix }}
 
   {% if display_submitted %}
-    <footer class="node__meta">
+    <div class="mb-4 flex items-center gap-3">
       {{ author_picture }}
-      <div{{ author_attributes.addClass('node__submitted') }}>
+      <div{{ author_attributes.addClass('text-sm text-dark-grey') }}>
         {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
         {{ metadata }}
       </div>
-    </footer>
+    </div>
   {% endif %}
 
-  <div{{ content_attributes.addClass('node__content') }}>
+  <div{{ content_attributes.addClass('prose max-w-none') }}>
     {{ content }}
   </div>
 

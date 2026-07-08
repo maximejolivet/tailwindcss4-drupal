@@ -1,0 +1,1102 @@
+{
+  "/Users/maxime/Sites/tailwindcss4-drupal/.claude/settings.json": {
+    "mtime": 1780782480.4416416,
+    "ast_hash": "0e657c1176f25dfacf10f26719d3edc9",
+    "semantic_hash": "0e657c1176f25dfacf10f26719d3edc9"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/.claude/settings.local.json": {
+    "mtime": 1780783865.713403,
+    "ast_hash": "693c781f4a4807c78f2d3cf94dc52fe4",
+    "semantic_hash": "693c781f4a4807c78f2d3cf94dc52fe4"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/composer.json": {
+    "mtime": 1777470463.0646582,
+    "ast_hash": "ab0cd96457e0d0e09c8711a9d630f145",
+    "semantic_hash": "ab0cd96457e0d0e09c8711a9d630f145"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/drush/Commands/PolicyCommands.php": {
+    "mtime": 1772466148.9399056,
+    "ast_hash": "e1f0be4316e88acc4faed63070b2e0f1",
+    "semantic_hash": "e1f0be4316e88acc4faed63070b2e0f1"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/load.environment.php": {
+    "mtime": 1772466148.9420078,
+    "ast_hash": "79311cef8e41785b6a64236a05fa3f59",
+    "semantic_hash": "79311cef8e41785b6a64236a05fa3f59"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/package.json": {
+    "mtime": 1772466148.942508,
+    "ast_hash": "3f948e1f4e90b8f74be90f8a3e9aaf0c",
+    "semantic_hash": "3f948e1f4e90b8f74be90f8a3e9aaf0c"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/web/.eslintrc.json": {
+    "mtime": 1772471554.9871,
+    "ast_hash": "3df083cb37621e0fc13bc9e65da8a155",
+    "semantic_hash": "3df083cb37621e0fc13bc9e65da8a155"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/web/.ht.router.php": {
+    "mtime": 1772572354.239832,
+    "ast_hash": "11f63a7d44c78ce714188ecab085c636",
+    "semantic_hash": "11f63a7d44c78ce714188ecab085c636"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/web/autoload.php": {
+    "mtime": 1777470357.0313778,
+    "ast_hash": "c2f62d996dc0f54a3f6a30cee7d21d6a",
+    "semantic_hash": "c2f62d996dc0f54a3f6a30cee7d21d6a"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/web/index.php": {
+    "mtime": 1772471554.9547098,
+    "ast_hash": "3b4ca475be1a829f9ee6cf0efdb42e54",
+    "semantic_hash": "3b4ca475be1a829f9ee6cf0efdb42e54"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/web/modules/custom/tailwind_hmr/src/Hook/LibraryHooks.php": {
+    "mtime": 1772466884.1022935,
+    "ast_hash": "d956bdd896c510718b4b7b701899113b",
+    "semantic_hash": "d956bdd896c510718b4b7b701899113b"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/web/sites/default/default.settings.php": {
+    "mtime": 1772572354.4239557,
+    "ast_hash": "8696404f7bbe4e709a47236368e4a92e",
+    "semantic_hash": "8696404f7bbe4e709a47236368e4a92e"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/web/sites/default/settings.local.php": {
+    "mtime": 1747581751.0,
+    "ast_hash": "d37d1996effb2b4cce228594f3b13921",
+    "semantic_hash": "d37d1996effb2b4cce228594f3b13921"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/web/sites/example.settings.local.php": {
+    "mtime": 1745053803.0,
+    "ast_hash": "cc6dd52fd6bd85d7d0ec781ebd00efe4",
+    "semantic_hash": "cc6dd52fd6bd85d7d0ec781ebd00efe4"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/web/sites/example.sites.php": {
+    "mtime": 1745053803.0,
+    "ast_hash": "c3ae2f357c91169853987d747536c5bd",
+    "semantic_hash": "c3ae2f357c91169853987d747536c5bd"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/web/themes/custom/tailwind/includes/html.inc": {
+    "mtime": 1772466148.9471176,
+    "ast_hash": "feabe5cc691b088d6ade3e04d6b120fc",
+    "semantic_hash": "feabe5cc691b088d6ade3e04d6b120fc"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/web/themes/custom/tailwind/includes/node.inc": {
+    "mtime": 1772466148.9476006,
+    "ast_hash": "feabe5cc691b088d6ade3e04d6b120fc",
+    "semantic_hash": "feabe5cc691b088d6ade3e04d6b120fc"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/web/themes/custom/tailwind/includes/page.inc": {
+    "mtime": 1772466148.947984,
+    "ast_hash": "feabe5cc691b088d6ade3e04d6b120fc",
+    "semantic_hash": "feabe5cc691b088d6ade3e04d6b120fc"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/web/themes/custom/tailwind/package.json": {
+    "mtime": 1776886148.4486938,
+    "ast_hash": "37b5aee8f8bf01017c7109f4490c9c1f",
+    "semantic_hash": "37b5aee8f8bf01017c7109f4490c9c1f"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/web/themes/custom/tailwind/plugins/exclude-all-css-excepts.config.mjs": {
+    "mtime": 1772466148.949827,
+    "ast_hash": "f89fefcabb0ea0111cc88570c4f8b4e8",
+    "semantic_hash": "f89fefcabb0ea0111cc88570c4f8b4e8"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/web/themes/custom/tailwind/plugins/update-js.config.mjs": {
+    "mtime": 1772466148.9507246,
+    "ast_hash": "51d90f9be9f6c867568409ed7502829f",
+    "semantic_hash": "51d90f9be9f6c867568409ed7502829f"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/web/themes/custom/tailwind/src/js/theme.js": {
+    "mtime": 1780777856.938585,
+    "ast_hash": "b721b8c69bacd1a1140a86ae90f41cb3",
+    "semantic_hash": "b721b8c69bacd1a1140a86ae90f41cb3"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/web/themes/custom/tailwind/vite.config.mjs": {
+    "mtime": 1772466148.9920378,
+    "ast_hash": "8f2aefa4ac1edd980ffd60031646bc49",
+    "semantic_hash": "8f2aefa4ac1edd980ffd60031646bc49"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/web/update.php": {
+    "mtime": 1772471554.9753795,
+    "ast_hash": "385d61cef66d5a1053e93a88c3c63e19",
+    "semantic_hash": "385d61cef66d5a1053e93a88c3c63e19"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/.claude/CLAUDE.md": {
+    "mtime": 1777457247.529926,
+    "ast_hash": "626e576f91243ed52e30dd6e82505dd4",
+    "semantic_hash": "626e576f91243ed52e30dd6e82505dd4"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/.claude/skills/drupal-config-cycle/SKILL.md": {
+    "mtime": 1780777601.9251308,
+    "ast_hash": "3b4d09dd72778b692481151a1826baf7",
+    "semantic_hash": "3b4d09dd72778b692481151a1826baf7"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/.claude/skills/vite-dev/SKILL.md": {
+    "mtime": 1780777581.0509973,
+    "ast_hash": "34b9ed6dcb7a00ae67bfcc9954aacac0",
+    "semantic_hash": "34b9ed6dcb7a00ae67bfcc9954aacac0"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/.lando.yml": {
+    "mtime": 1772466148.88346,
+    "ast_hash": "4807799d71bd2565825eb2885e4133a5",
+    "semantic_hash": "4807799d71bd2565825eb2885e4133a5"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/CLAUDE.md": {
+    "mtime": 1780782391.3590362,
+    "ast_hash": "22d5f394ca14c56de3e5893de993faa3",
+    "semantic_hash": "22d5f394ca14c56de3e5893de993faa3"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/README.md": {
+    "mtime": 1777470462.0005355,
+    "ast_hash": "0b0760c128d94385bf5ad19cac00b816",
+    "semantic_hash": "0b0760c128d94385bf5ad19cac00b816"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/admin_toolbar.settings.yml": {
+    "mtime": 1777470841.6415555,
+    "ast_hash": "d964709e6d1ad84b499f9c52cdff6a79",
+    "semantic_hash": "d964709e6d1ad84b499f9c52cdff6a79"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/admin_toolbar_search.settings.yml": {
+    "mtime": 1777470841.6441803,
+    "ast_hash": "3580050bbfa589c0aa9e006807e29d7d",
+    "semantic_hash": "3580050bbfa589c0aa9e006807e29d7d"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/admin_toolbar_tools.settings.yml": {
+    "mtime": 1777470841.6466088,
+    "ast_hash": "585b2bf0b22ebab4938503678c357627",
+    "semantic_hash": "585b2bf0b22ebab4938503678c357627"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/backend.settings.yml": {
+    "mtime": 1777470841.6492457,
+    "ast_hash": "f243405630648c1264300c6578b53f42",
+    "semantic_hash": "f243405630648c1264300c6578b53f42"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/block.block.backend_breadcrumbs.yml": {
+    "mtime": 1777470841.65238,
+    "ast_hash": "2e595cbcfbfb92e9cb9c630628553894",
+    "semantic_hash": "2e595cbcfbfb92e9cb9c630628553894"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/block.block.backend_content.yml": {
+    "mtime": 1777470841.6571286,
+    "ast_hash": "6d5bab613f168c98ea24ed269f772e2a",
+    "semantic_hash": "6d5bab613f168c98ea24ed269f772e2a"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/block.block.backend_local_actions.yml": {
+    "mtime": 1777470841.6600993,
+    "ast_hash": "f99a54806826665c123505b586367e01",
+    "semantic_hash": "f99a54806826665c123505b586367e01"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/block.block.backend_messages.yml": {
+    "mtime": 1777470841.6638613,
+    "ast_hash": "9846f2123b5a9ca147229dd0ccb4c343",
+    "semantic_hash": "9846f2123b5a9ca147229dd0ccb4c343"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/block.block.backend_page_title.yml": {
+    "mtime": 1777470841.6677573,
+    "ast_hash": "3dfb21ee07ae2f58fedfbcaad6ed7e17",
+    "semantic_hash": "3dfb21ee07ae2f58fedfbcaad6ed7e17"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/block.block.backend_primary_local_tasks.yml": {
+    "mtime": 1777470841.6706634,
+    "ast_hash": "eb066a041f9ff6f5522dab367d4820b5",
+    "semantic_hash": "eb066a041f9ff6f5522dab367d4820b5"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/block.block.backend_secondary_local_tasks.yml": {
+    "mtime": 1777470841.6735892,
+    "ast_hash": "828bae98ac96010aa962e873dc6e21c4",
+    "semantic_hash": "828bae98ac96010aa962e873dc6e21c4"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/block.block.claro_breadcrumbs.yml": {
+    "mtime": 1777470841.6774108,
+    "ast_hash": "57497c5c5e12b3cc44235b4e995a7e74",
+    "semantic_hash": "57497c5c5e12b3cc44235b4e995a7e74"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/block.block.claro_content.yml": {
+    "mtime": 1777470841.6803167,
+    "ast_hash": "debe8c7da1d9bff35e4ae06423a41c7d",
+    "semantic_hash": "debe8c7da1d9bff35e4ae06423a41c7d"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/block.block.claro_local_actions.yml": {
+    "mtime": 1777470841.683009,
+    "ast_hash": "2c50aa028505bdef92519bf71f08a60f",
+    "semantic_hash": "2c50aa028505bdef92519bf71f08a60f"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/block.block.claro_messages.yml": {
+    "mtime": 1777470841.6867416,
+    "ast_hash": "73c80f1f0242e32f4613d851766986d5",
+    "semantic_hash": "73c80f1f0242e32f4613d851766986d5"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/block.block.claro_page_title.yml": {
+    "mtime": 1777470841.6905398,
+    "ast_hash": "23ab89b28aa8e568c176211c2bb835f1",
+    "semantic_hash": "23ab89b28aa8e568c176211c2bb835f1"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/block.block.claro_primary_local_tasks.yml": {
+    "mtime": 1777470841.6931806,
+    "ast_hash": "e443fb56281577cfdf1f6e9f9c292ea3",
+    "semantic_hash": "e443fb56281577cfdf1f6e9f9c292ea3"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/block.block.claro_secondary_local_tasks.yml": {
+    "mtime": 1777470841.7039576,
+    "ast_hash": "6cec7b5d77e5c8d04b727c99ec9a8692",
+    "semantic_hash": "6cec7b5d77e5c8d04b727c99ec9a8692"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/block.block.tailwind_breadcrumbs.yml": {
+    "mtime": 1777470841.7078013,
+    "ast_hash": "694ecdddfa29df11beb86c5e19ff48ef",
+    "semantic_hash": "694ecdddfa29df11beb86c5e19ff48ef"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/block.block.tailwind_content.yml": {
+    "mtime": 1777470841.7112741,
+    "ast_hash": "5f641be25a466d456bc147f48e489735",
+    "semantic_hash": "5f641be25a466d456bc147f48e489735"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/block.block.tailwind_local_actions.yml": {
+    "mtime": 1777470841.7208009,
+    "ast_hash": "6589afb768479a947b3c3aea01eb3113",
+    "semantic_hash": "6589afb768479a947b3c3aea01eb3113"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/block.block.tailwind_messages.yml": {
+    "mtime": 1777470841.7477643,
+    "ast_hash": "ab609d3d03cf21c1056cff16e355d58d",
+    "semantic_hash": "ab609d3d03cf21c1056cff16e355d58d"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/block.block.tailwind_page_title.yml": {
+    "mtime": 1777470841.7708201,
+    "ast_hash": "6051088ea0c5353adf7ff222669932b5",
+    "semantic_hash": "6051088ea0c5353adf7ff222669932b5"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/block.block.tailwind_primary_local_tasks.yml": {
+    "mtime": 1777470841.805376,
+    "ast_hash": "37254e7609c795125d98e84d3bc04152",
+    "semantic_hash": "37254e7609c795125d98e84d3bc04152"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/block.block.tailwind_secondary_local_tasks.yml": {
+    "mtime": 1777470841.8098428,
+    "ast_hash": "6cb8da5650c9ee70c57a8f0c24a9f15c",
+    "semantic_hash": "6cb8da5650c9ee70c57a8f0c24a9f15c"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/claro.settings.yml": {
+    "mtime": 1777470841.8141904,
+    "ast_hash": "b630624aadf4d9318f1d59001283fd7b",
+    "semantic_hash": "b630624aadf4d9318f1d59001283fd7b"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/core.base_field_override.node.page.promote.yml": {
+    "mtime": 1777470841.8745418,
+    "ast_hash": "38dacd1c256b9ad43e7ce921538feab0",
+    "semantic_hash": "38dacd1c256b9ad43e7ce921538feab0"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/core.date_format.fallback.yml": {
+    "mtime": 1777470841.9088526,
+    "ast_hash": "23b9549664a84579796cdcd08c02e9d5",
+    "semantic_hash": "23b9549664a84579796cdcd08c02e9d5"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/core.date_format.html_date.yml": {
+    "mtime": 1777470841.9345226,
+    "ast_hash": "7daf8f70eff4757958683166cb26e2d4",
+    "semantic_hash": "7daf8f70eff4757958683166cb26e2d4"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/core.date_format.html_datetime.yml": {
+    "mtime": 1777470841.9393034,
+    "ast_hash": "3f69b34c76154ab1cd3d03469c92c5c0",
+    "semantic_hash": "3f69b34c76154ab1cd3d03469c92c5c0"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/core.date_format.html_month.yml": {
+    "mtime": 1777470841.9424636,
+    "ast_hash": "f4fdf4c56c7944a856d4e93f03960ed2",
+    "semantic_hash": "f4fdf4c56c7944a856d4e93f03960ed2"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/core.date_format.html_time.yml": {
+    "mtime": 1777470841.945112,
+    "ast_hash": "390359e9d5e1379564b08284286e86d8",
+    "semantic_hash": "390359e9d5e1379564b08284286e86d8"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/core.date_format.html_week.yml": {
+    "mtime": 1777470841.9521704,
+    "ast_hash": "7890e57740ee5ab3bba19f2d0c08c1bf",
+    "semantic_hash": "7890e57740ee5ab3bba19f2d0c08c1bf"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/core.date_format.html_year.yml": {
+    "mtime": 1777470841.9550993,
+    "ast_hash": "0d50f41d3c2d311f0ca007f04aad1d1e",
+    "semantic_hash": "0d50f41d3c2d311f0ca007f04aad1d1e"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/core.date_format.html_yearless_date.yml": {
+    "mtime": 1777470841.9585989,
+    "ast_hash": "0b7ade76d4a0feafad6980d9c778379a",
+    "semantic_hash": "0b7ade76d4a0feafad6980d9c778379a"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/core.date_format.long.yml": {
+    "mtime": 1777470841.9653332,
+    "ast_hash": "779de74a8dd4391a36a062039a6a13a3",
+    "semantic_hash": "779de74a8dd4391a36a062039a6a13a3"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/core.date_format.medium.yml": {
+    "mtime": 1777470841.9680846,
+    "ast_hash": "ed1a8072c75ee343e369314673c27b22",
+    "semantic_hash": "ed1a8072c75ee343e369314673c27b22"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/core.date_format.short.yml": {
+    "mtime": 1777470841.9736416,
+    "ast_hash": "bf4e6eb97e141f06a456af99884106d1",
+    "semantic_hash": "bf4e6eb97e141f06a456af99884106d1"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/core.entity_form_display.media.image.default.yml": {
+    "mtime": 1777470841.9888375,
+    "ast_hash": "09a75eb89e1ae3a3a2a1c3fe43ae1b2a",
+    "semantic_hash": "09a75eb89e1ae3a3a2a1c3fe43ae1b2a"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/core.entity_form_display.media.image.media_library.yml": {
+    "mtime": 1777470842.0029633,
+    "ast_hash": "543f68375c2b2a83561d3ccde05fd60d",
+    "semantic_hash": "543f68375c2b2a83561d3ccde05fd60d"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/core.entity_form_display.node.page.default.yml": {
+    "mtime": 1777470842.024233,
+    "ast_hash": "c6884ec0274ae14368c0c6d92ac3dfd8",
+    "semantic_hash": "c6884ec0274ae14368c0c6d92ac3dfd8"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/core.entity_form_mode.media.media_library.yml": {
+    "mtime": 1777470842.0290668,
+    "ast_hash": "1aee24e4ac4759487ca47a86fd401fd8",
+    "semantic_hash": "1aee24e4ac4759487ca47a86fd401fd8"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/core.entity_form_mode.user.register.yml": {
+    "mtime": 1777470842.0331602,
+    "ast_hash": "6fc8bf880f24368147c5b5023112bc6d",
+    "semantic_hash": "6fc8bf880f24368147c5b5023112bc6d"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/core.entity_view_display.media.image.default.yml": {
+    "mtime": 1777470842.0375001,
+    "ast_hash": "aed9304eea3124117bf70e36c4986a7a",
+    "semantic_hash": "aed9304eea3124117bf70e36c4986a7a"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/core.entity_view_display.media.image.media_library.yml": {
+    "mtime": 1777470842.0421984,
+    "ast_hash": "0211b513eed73a024c879429dbbff845",
+    "semantic_hash": "0211b513eed73a024c879429dbbff845"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/core.entity_view_display.node.page.default.yml": {
+    "mtime": 1777470842.045177,
+    "ast_hash": "654d2cb7f342343129fc8bf246b77756",
+    "semantic_hash": "654d2cb7f342343129fc8bf246b77756"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/core.entity_view_mode.media.full.yml": {
+    "mtime": 1777470842.0846417,
+    "ast_hash": "0b214d3645226c991430090083230a21",
+    "semantic_hash": "0b214d3645226c991430090083230a21"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/core.entity_view_mode.media.media_library.yml": {
+    "mtime": 1777470842.0875707,
+    "ast_hash": "db7dbc1bf2d5a55782adc1bd2bb65c94",
+    "semantic_hash": "db7dbc1bf2d5a55782adc1bd2bb65c94"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/core.entity_view_mode.node.full.yml": {
+    "mtime": 1777470842.1003227,
+    "ast_hash": "9bf6f23769d16c62da538ec3334efd42",
+    "semantic_hash": "9bf6f23769d16c62da538ec3334efd42"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/core.entity_view_mode.node.rss.yml": {
+    "mtime": 1777470842.1041336,
+    "ast_hash": "be2e261f68d783b5571fde365837f3d2",
+    "semantic_hash": "be2e261f68d783b5571fde365837f3d2"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/core.entity_view_mode.node.search_index.yml": {
+    "mtime": 1777470842.1087363,
+    "ast_hash": "3c95f6d39bc16a0356a235d5427653bd",
+    "semantic_hash": "3c95f6d39bc16a0356a235d5427653bd"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/core.entity_view_mode.node.search_result.yml": {
+    "mtime": 1777470842.1117613,
+    "ast_hash": "d116470468519f2386872404162b33be",
+    "semantic_hash": "d116470468519f2386872404162b33be"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/core.entity_view_mode.node.teaser.yml": {
+    "mtime": 1777470842.1186342,
+    "ast_hash": "a65236c035a11ee07facee551dcd43e7",
+    "semantic_hash": "a65236c035a11ee07facee551dcd43e7"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/core.entity_view_mode.paragraph.preview.yml": {
+    "mtime": 1777470842.1247447,
+    "ast_hash": "8eec7b317d86152f1ad5c9af314f6187",
+    "semantic_hash": "8eec7b317d86152f1ad5c9af314f6187"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/core.entity_view_mode.taxonomy_term.full.yml": {
+    "mtime": 1777470842.1392713,
+    "ast_hash": "dc3834d2baa6b1520914daa17a99d6ae",
+    "semantic_hash": "dc3834d2baa6b1520914daa17a99d6ae"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/core.entity_view_mode.user.compact.yml": {
+    "mtime": 1777470842.1485834,
+    "ast_hash": "bed171f6618e6f1a8ad447f1a806036c",
+    "semantic_hash": "bed171f6618e6f1a8ad447f1a806036c"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/core.entity_view_mode.user.full.yml": {
+    "mtime": 1777470842.15242,
+    "ast_hash": "7b95e3a268e1b335d35818e8dc068ab2",
+    "semantic_hash": "7b95e3a268e1b335d35818e8dc068ab2"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/core.extension.yml": {
+    "mtime": 1777470842.160095,
+    "ast_hash": "a2ff9fde8546b0ae92255ef5a5d784d9",
+    "semantic_hash": "a2ff9fde8546b0ae92255ef5a5d784d9"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/core.menu.static_menu_link_overrides.yml": {
+    "mtime": 1777470842.165171,
+    "ast_hash": "3523ff68ecae8c07db0c0acf5e7d3923",
+    "semantic_hash": "3523ff68ecae8c07db0c0acf5e7d3923"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/dblog.settings.yml": {
+    "mtime": 1777470842.1689303,
+    "ast_hash": "637e8cf1805acc8c84ec62a445cd4ea0",
+    "semantic_hash": "637e8cf1805acc8c84ec62a445cd4ea0"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/field.field.media.image.field_media_image.yml": {
+    "mtime": 1777470842.1722236,
+    "ast_hash": "730710949be15871fd526e1d9e472e2a",
+    "semantic_hash": "730710949be15871fd526e1d9e472e2a"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/field.settings.yml": {
+    "mtime": 1777470842.1760564,
+    "ast_hash": "f2e22b2ff17571d5c31cb6a00e6d0bff",
+    "semantic_hash": "f2e22b2ff17571d5c31cb6a00e6d0bff"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/field.storage.media.field_media_image.yml": {
+    "mtime": 1777470842.1792068,
+    "ast_hash": "0058afd0ba3586b993804e5e10540209",
+    "semantic_hash": "0058afd0ba3586b993804e5e10540209"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/field.storage.node.body.yml": {
+    "mtime": 1777470842.1858742,
+    "ast_hash": "9c8b4fdeb1d2b1389349670be03ffc61",
+    "semantic_hash": "9c8b4fdeb1d2b1389349670be03ffc61"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/field_ui.settings.yml": {
+    "mtime": 1777470842.1887765,
+    "ast_hash": "255b3b1a6dbbc0894fb35b540b0d9d46",
+    "semantic_hash": "255b3b1a6dbbc0894fb35b540b0d9d46"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/file.settings.yml": {
+    "mtime": 1777470842.1927094,
+    "ast_hash": "1a4c01ba10fb89ae730ebe3269ea2803",
+    "semantic_hash": "1a4c01ba10fb89ae730ebe3269ea2803"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/filter.format.plain_text.yml": {
+    "mtime": 1777470842.1988587,
+    "ast_hash": "0de26025387aeafeb7c24a004a74ec7f",
+    "semantic_hash": "0de26025387aeafeb7c24a004a74ec7f"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/filter.settings.yml": {
+    "mtime": 1777470842.2016454,
+    "ast_hash": "d6e9d2cf96fcf815890308964e23b3fd",
+    "semantic_hash": "d6e9d2cf96fcf815890308964e23b3fd"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/gin.settings.yml": {
+    "mtime": 1777470842.2063034,
+    "ast_hash": "80ad3476b6adbf439b4cbc7e37542b3b",
+    "semantic_hash": "80ad3476b6adbf439b4cbc7e37542b3b"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/image.settings.yml": {
+    "mtime": 1777470842.210017,
+    "ast_hash": "d4317ae6a6d8e2069658aad1b120bfbe",
+    "semantic_hash": "d4317ae6a6d8e2069658aad1b120bfbe"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/image.style.large.yml": {
+    "mtime": 1777470842.2133214,
+    "ast_hash": "d346015a7b8b6ebd5ef4f38bdbdf694a",
+    "semantic_hash": "d346015a7b8b6ebd5ef4f38bdbdf694a"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/image.style.media_library.yml": {
+    "mtime": 1777470842.2171319,
+    "ast_hash": "6d31532f03d26e71527d5de3026e2bdb",
+    "semantic_hash": "6d31532f03d26e71527d5de3026e2bdb"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/image.style.medium.yml": {
+    "mtime": 1777470842.2230484,
+    "ast_hash": "c7aee8a6cc221ed02afbf99033a510bd",
+    "semantic_hash": "c7aee8a6cc221ed02afbf99033a510bd"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/image.style.thumbnail.yml": {
+    "mtime": 1777470842.2260504,
+    "ast_hash": "a2607311d28535e7ad71f89f9a82753d",
+    "semantic_hash": "a2607311d28535e7ad71f89f9a82753d"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/image.style.wide.yml": {
+    "mtime": 1777470842.232732,
+    "ast_hash": "736ab499437297061d14e6594a4ffd9e",
+    "semantic_hash": "736ab499437297061d14e6594a4ffd9e"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/masquerade.settings.yml": {
+    "mtime": 1777470842.2353296,
+    "ast_hash": "e4ffc5f4ee62de531ddbda7818c4dd63",
+    "semantic_hash": "e4ffc5f4ee62de531ddbda7818c4dd63"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/media.settings.yml": {
+    "mtime": 1777470842.2380035,
+    "ast_hash": "d8d1dd89d01e84a06419a497acf3edf4",
+    "semantic_hash": "d8d1dd89d01e84a06419a497acf3edf4"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/media.type.image.yml": {
+    "mtime": 1777470842.2420125,
+    "ast_hash": "69db4a47c346af120d70fda6d0b3b6bb",
+    "semantic_hash": "69db4a47c346af120d70fda6d0b3b6bb"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/media_library.settings.yml": {
+    "mtime": 1777470842.246223,
+    "ast_hash": "796be41063efbdf18f52ef1a668b19cd",
+    "semantic_hash": "796be41063efbdf18f52ef1a668b19cd"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/menu_ui.settings.yml": {
+    "mtime": 1777470842.2496371,
+    "ast_hash": "d41c2b0d999923bff55c6f69d68dfce1",
+    "semantic_hash": "d41c2b0d999923bff55c6f69d68dfce1"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/metatag.metatag_defaults.403.yml": {
+    "mtime": 1777470842.2533665,
+    "ast_hash": "5ac8bcde9ad10bd2e480ecd18dfc47ba",
+    "semantic_hash": "5ac8bcde9ad10bd2e480ecd18dfc47ba"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/metatag.metatag_defaults.404.yml": {
+    "mtime": 1777470842.257667,
+    "ast_hash": "a983590e0afe78c5c716b0af0dac8d5b",
+    "semantic_hash": "a983590e0afe78c5c716b0af0dac8d5b"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/metatag.metatag_defaults.front.yml": {
+    "mtime": 1777470842.26046,
+    "ast_hash": "2348d5b5e0f1562402ac947977305505",
+    "semantic_hash": "2348d5b5e0f1562402ac947977305505"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/metatag.metatag_defaults.global.yml": {
+    "mtime": 1777470842.295869,
+    "ast_hash": "bed8bd31e02ff18f6759e570d9f80a99",
+    "semantic_hash": "bed8bd31e02ff18f6759e570d9f80a99"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/metatag.metatag_defaults.node.yml": {
+    "mtime": 1777470842.3186383,
+    "ast_hash": "950e6a649b189c5fa63b1b27c7eb8af0",
+    "semantic_hash": "950e6a649b189c5fa63b1b27c7eb8af0"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/metatag.metatag_defaults.taxonomy_term.yml": {
+    "mtime": 1777470842.3552856,
+    "ast_hash": "330f2c4f62656c375e71683a9c555490",
+    "semantic_hash": "330f2c4f62656c375e71683a9c555490"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/metatag.metatag_defaults.user.yml": {
+    "mtime": 1777470842.358869,
+    "ast_hash": "273b7d176ced57d2aa44cf9c7b2cf537",
+    "semantic_hash": "273b7d176ced57d2aa44cf9c7b2cf537"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/metatag.settings.yml": {
+    "mtime": 1777470842.3665297,
+    "ast_hash": "fa0f5eb56008f252abf6ec143efdc864",
+    "semantic_hash": "fa0f5eb56008f252abf6ec143efdc864"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/node.settings.yml": {
+    "mtime": 1777470842.3703141,
+    "ast_hash": "e19baaf12c3442809ffdcacc7f1c8524",
+    "semantic_hash": "e19baaf12c3442809ffdcacc7f1c8524"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/node.type.page.yml": {
+    "mtime": 1777470842.3745666,
+    "ast_hash": "d0d9abd24a983e56994e40d885e7d810",
+    "semantic_hash": "d0d9abd24a983e56994e40d885e7d810"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/paragraphs.settings.yml": {
+    "mtime": 1777470842.3894513,
+    "ast_hash": "2ad23d3c28e3b794fbedb3043c0ba9a4",
+    "semantic_hash": "2ad23d3c28e3b794fbedb3043c0ba9a4"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/pathauto.settings.yml": {
+    "mtime": 1777470842.3930418,
+    "ast_hash": "5bb7ab3b3614935fd3da6a1bc9dcc1b0",
+    "semantic_hash": "5bb7ab3b3614935fd3da6a1bc9dcc1b0"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/redirect.settings.yml": {
+    "mtime": 1777470842.3966625,
+    "ast_hash": "04288442eafe3e1217bbdf5b4fcfc44f",
+    "semantic_hash": "04288442eafe3e1217bbdf5b4fcfc44f"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/redirect_404.settings.yml": {
+    "mtime": 1777470842.4065747,
+    "ast_hash": "9e95bba522461ba96fec4d73039a0534",
+    "semantic_hash": "9e95bba522461ba96fec4d73039a0534"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/redirect_domain.domains.yml": {
+    "mtime": 1777470842.410993,
+    "ast_hash": "1b7b4dc6fedef79d9c76b829ebd41c2e",
+    "semantic_hash": "1b7b4dc6fedef79d9c76b829ebd41c2e"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/system.action.media_delete_action.yml": {
+    "mtime": 1777470842.4184227,
+    "ast_hash": "fc58d457b65cef49fb7105d90ae994cf",
+    "semantic_hash": "fc58d457b65cef49fb7105d90ae994cf"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/system.action.media_publish_action.yml": {
+    "mtime": 1777470842.4255502,
+    "ast_hash": "6b6ecda46e3400732b50dd00802fff49",
+    "semantic_hash": "6b6ecda46e3400732b50dd00802fff49"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/system.action.media_save_action.yml": {
+    "mtime": 1777470842.428601,
+    "ast_hash": "9d05d007eac7d61916b69ad440f53155",
+    "semantic_hash": "9d05d007eac7d61916b69ad440f53155"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/system.action.media_unpublish_action.yml": {
+    "mtime": 1777470842.4336388,
+    "ast_hash": "69c408741075caac8f378cbb1578d411",
+    "semantic_hash": "69c408741075caac8f378cbb1578d411"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/system.action.node_delete_action.yml": {
+    "mtime": 1777470842.4378448,
+    "ast_hash": "71481d0c1e84e78d5188d1aaa1ea3139",
+    "semantic_hash": "71481d0c1e84e78d5188d1aaa1ea3139"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/system.action.node_make_sticky_action.yml": {
+    "mtime": 1777470842.4442317,
+    "ast_hash": "5958f5a442c4f5b1d44ff6000e5213b6",
+    "semantic_hash": "5958f5a442c4f5b1d44ff6000e5213b6"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/system.action.node_make_unsticky_action.yml": {
+    "mtime": 1777470842.450831,
+    "ast_hash": "1e2c22f58a46601070b5d179c55666c8",
+    "semantic_hash": "1e2c22f58a46601070b5d179c55666c8"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/system.action.node_promote_action.yml": {
+    "mtime": 1777470842.455611,
+    "ast_hash": "5f1b071febe0e16489d26b9c7f5557f9",
+    "semantic_hash": "5f1b071febe0e16489d26b9c7f5557f9"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/system.action.node_publish_action.yml": {
+    "mtime": 1777470842.4607291,
+    "ast_hash": "47fcf3e0c6d34562f5b77addda9b9b63",
+    "semantic_hash": "47fcf3e0c6d34562f5b77addda9b9b63"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/system.action.node_save_action.yml": {
+    "mtime": 1777470842.468352,
+    "ast_hash": "81daf9b5f6c2053887014eb31486a527",
+    "semantic_hash": "81daf9b5f6c2053887014eb31486a527"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/system.action.node_unpromote_action.yml": {
+    "mtime": 1777470842.4723907,
+    "ast_hash": "7b4622ed8d68851811c56733e42a3020",
+    "semantic_hash": "7b4622ed8d68851811c56733e42a3020"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/system.action.node_unpublish_action.yml": {
+    "mtime": 1777470842.4776187,
+    "ast_hash": "45a668cd5d2648620276bd45a1d95b71",
+    "semantic_hash": "45a668cd5d2648620276bd45a1d95b71"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/system.action.pathauto_update_alias_node.yml": {
+    "mtime": 1777470842.4841125,
+    "ast_hash": "ac5bc1baeeb2beff6ec0c591b3559e04",
+    "semantic_hash": "ac5bc1baeeb2beff6ec0c591b3559e04"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/system.action.pathauto_update_alias_user.yml": {
+    "mtime": 1777470842.5190256,
+    "ast_hash": "e9a95c52cc010c9b82a7196568b19481",
+    "semantic_hash": "e9a95c52cc010c9b82a7196568b19481"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/system.action.redirect_delete_action.yml": {
+    "mtime": 1777470842.550935,
+    "ast_hash": "2d9c345ce5d70627fbbb5bab1e6d0540",
+    "semantic_hash": "2d9c345ce5d70627fbbb5bab1e6d0540"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/system.action.taxonomy_term_publish_action.yml": {
+    "mtime": 1777470842.554822,
+    "ast_hash": "aa070335a01ed7d1a32cde36e60f8330",
+    "semantic_hash": "aa070335a01ed7d1a32cde36e60f8330"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/system.action.taxonomy_term_unpublish_action.yml": {
+    "mtime": 1777470842.5596948,
+    "ast_hash": "32485c9541f454554f9928a5689069e0",
+    "semantic_hash": "32485c9541f454554f9928a5689069e0"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/system.action.user_add_role_action.administrator.yml": {
+    "mtime": 1777470842.5682528,
+    "ast_hash": "5f1194f1f7db67faeb5a81dad7b0acb6",
+    "semantic_hash": "5f1194f1f7db67faeb5a81dad7b0acb6"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/system.action.user_block_user_action.yml": {
+    "mtime": 1777470842.5729573,
+    "ast_hash": "bb5a2c7484aa1283d78a862c954ad8ed",
+    "semantic_hash": "bb5a2c7484aa1283d78a862c954ad8ed"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/system.action.user_cancel_user_action.yml": {
+    "mtime": 1777470842.5834668,
+    "ast_hash": "a93f1ff5d7630711f43392b77bebe395",
+    "semantic_hash": "a93f1ff5d7630711f43392b77bebe395"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/system.action.user_remove_role_action.administrator.yml": {
+    "mtime": 1777470842.5897624,
+    "ast_hash": "1deb1984e7904e0ceb01b44ec968f0b1",
+    "semantic_hash": "1deb1984e7904e0ceb01b44ec968f0b1"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/system.action.user_unblock_user_action.yml": {
+    "mtime": 1777470842.599391,
+    "ast_hash": "dc128d743ec32c5dd91fe74da7d29b93",
+    "semantic_hash": "dc128d743ec32c5dd91fe74da7d29b93"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/system.advisories.yml": {
+    "mtime": 1777470842.60314,
+    "ast_hash": "0395d9637f0eb4a7612f46543cd64bb0",
+    "semantic_hash": "0395d9637f0eb4a7612f46543cd64bb0"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/system.cron.yml": {
+    "mtime": 1777470842.607293,
+    "ast_hash": "437f35d533b54c05bbe8764aba549731",
+    "semantic_hash": "437f35d533b54c05bbe8764aba549731"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/system.date.yml": {
+    "mtime": 1777470842.6123853,
+    "ast_hash": "e243b8856dc62083a8dafe9ac740a021",
+    "semantic_hash": "e243b8856dc62083a8dafe9ac740a021"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/system.diff.yml": {
+    "mtime": 1777470842.620027,
+    "ast_hash": "92d050ef8af94f0dcc440fdba8a63434",
+    "semantic_hash": "92d050ef8af94f0dcc440fdba8a63434"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/system.feature_flags.yml": {
+    "mtime": 1777470842.624206,
+    "ast_hash": "83bdd7cd5bea3c1ccab001d08724a3a7",
+    "semantic_hash": "83bdd7cd5bea3c1ccab001d08724a3a7"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/system.file.yml": {
+    "mtime": 1777470842.628223,
+    "ast_hash": "eab51a40442bfcdd7b81d090a49a06fc",
+    "semantic_hash": "eab51a40442bfcdd7b81d090a49a06fc"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/system.image.gd.yml": {
+    "mtime": 1777470842.643665,
+    "ast_hash": "d66fa54387f0da0db197e28d96a5c61a",
+    "semantic_hash": "d66fa54387f0da0db197e28d96a5c61a"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/system.image.yml": {
+    "mtime": 1777470842.6395578,
+    "ast_hash": "f4a9f64f91e10e394e49347eeecbefd8",
+    "semantic_hash": "f4a9f64f91e10e394e49347eeecbefd8"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/system.logging.yml": {
+    "mtime": 1777470842.6484764,
+    "ast_hash": "3e2a04613bdb3f57135e051d7636a54d",
+    "semantic_hash": "3e2a04613bdb3f57135e051d7636a54d"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/system.mail.yml": {
+    "mtime": 1777470842.6523824,
+    "ast_hash": "945fcefb3fa26dc020ceb594da729d90",
+    "semantic_hash": "945fcefb3fa26dc020ceb594da729d90"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/system.maintenance.yml": {
+    "mtime": 1777470842.6582482,
+    "ast_hash": "48cd1134150fe442097f2391fd4581ca",
+    "semantic_hash": "48cd1134150fe442097f2391fd4581ca"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/system.menu.account.yml": {
+    "mtime": 1777470842.6614268,
+    "ast_hash": "1a98e857799d2f3e77fa4b479940e076",
+    "semantic_hash": "1a98e857799d2f3e77fa4b479940e076"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/system.menu.admin.yml": {
+    "mtime": 1777470842.6653478,
+    "ast_hash": "537c95483a7354c678f116eeabfc475d",
+    "semantic_hash": "537c95483a7354c678f116eeabfc475d"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/system.menu.footer.yml": {
+    "mtime": 1777470842.6692939,
+    "ast_hash": "6066bd840c4b65695b6c61aed102db1b",
+    "semantic_hash": "6066bd840c4b65695b6c61aed102db1b"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/system.menu.main.yml": {
+    "mtime": 1777470842.6727765,
+    "ast_hash": "ccea328ea64c00b63c3b095b55d57dd7",
+    "semantic_hash": "ccea328ea64c00b63c3b095b55d57dd7"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/system.menu.tools.yml": {
+    "mtime": 1777470842.6763878,
+    "ast_hash": "9612ef4c26b17a6b226fcd08342cbdc5",
+    "semantic_hash": "9612ef4c26b17a6b226fcd08342cbdc5"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/system.performance.yml": {
+    "mtime": 1777470842.679232,
+    "ast_hash": "3414c54ccc4e7b690ad542e6cba8ac8e",
+    "semantic_hash": "3414c54ccc4e7b690ad542e6cba8ac8e"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/system.site.yml": {
+    "mtime": 1777470842.6826801,
+    "ast_hash": "41192a37482a4b734b9b3a9c12ee2e10",
+    "semantic_hash": "41192a37482a4b734b9b3a9c12ee2e10"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/system.theme.global.yml": {
+    "mtime": 1777470842.6894941,
+    "ast_hash": "238416b06deff58ab5ef66fc8e965707",
+    "semantic_hash": "238416b06deff58ab5ef66fc8e965707"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/system.theme.yml": {
+    "mtime": 1777470842.6866245,
+    "ast_hash": "b2d89ab1921e7d02d75f182294f75e69",
+    "semantic_hash": "b2d89ab1921e7d02d75f182294f75e69"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/taxonomy.settings.yml": {
+    "mtime": 1777470842.6929612,
+    "ast_hash": "1d9e991734757ae93aea4d51fc0de288",
+    "semantic_hash": "1d9e991734757ae93aea4d51fc0de288"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/text.settings.yml": {
+    "mtime": 1777470842.6966536,
+    "ast_hash": "34f0090499e35308fa2bfa0c85747681",
+    "semantic_hash": "34f0090499e35308fa2bfa0c85747681"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/update.settings.yml": {
+    "mtime": 1777470842.6995177,
+    "ast_hash": "5713a0205ae4c304c032a82a9469cb7c",
+    "semantic_hash": "5713a0205ae4c304c032a82a9469cb7c"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/user.flood.yml": {
+    "mtime": 1777470842.7031515,
+    "ast_hash": "6385ee493ec140ad8f5301541f252061",
+    "semantic_hash": "6385ee493ec140ad8f5301541f252061"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/user.mail.yml": {
+    "mtime": 1777470842.7069147,
+    "ast_hash": "7886619dbeaa2d6a5ebd3205e3a16a6d",
+    "semantic_hash": "7886619dbeaa2d6a5ebd3205e3a16a6d"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/user.role.administrator.yml": {
+    "mtime": 1777470842.7113943,
+    "ast_hash": "17eb756f2a3f4af9f2f548dc434b06bb",
+    "semantic_hash": "17eb756f2a3f4af9f2f548dc434b06bb"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/user.role.anonymous.yml": {
+    "mtime": 1777470842.7154367,
+    "ast_hash": "e6086589b9870a3573bb269a1a0524bf",
+    "semantic_hash": "e6086589b9870a3573bb269a1a0524bf"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/user.role.authenticated.yml": {
+    "mtime": 1777470842.7184799,
+    "ast_hash": "86404887961f9e2cd06d197ef2c0ecc3",
+    "semantic_hash": "86404887961f9e2cd06d197ef2c0ecc3"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/user.settings.yml": {
+    "mtime": 1777470842.7225463,
+    "ast_hash": "3485ee5e50c25c1d8777ec5fea0f5bd5",
+    "semantic_hash": "3485ee5e50c25c1d8777ec5fea0f5bd5"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/views.settings.yml": {
+    "mtime": 1777470842.726867,
+    "ast_hash": "7d813bbdac5d30b232d0079159af74b5",
+    "semantic_hash": "7d813bbdac5d30b232d0079159af74b5"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/views.view.archive.yml": {
+    "mtime": 1777470842.7331574,
+    "ast_hash": "d558de51d545df08685cf4e108d01cab",
+    "semantic_hash": "d558de51d545df08685cf4e108d01cab"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/views.view.content.yml": {
+    "mtime": 1777470842.7426655,
+    "ast_hash": "da16de736de96d02b580280daa385dbe",
+    "semantic_hash": "da16de736de96d02b580280daa385dbe"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/views.view.content_recent.yml": {
+    "mtime": 1777470842.7549262,
+    "ast_hash": "93bc56cb4519f93c6f119d4b09394629",
+    "semantic_hash": "93bc56cb4519f93c6f119d4b09394629"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/views.view.files.yml": {
+    "mtime": 1777470842.7764826,
+    "ast_hash": "91d9eab2c881582a11f6d25e35b49cc2",
+    "semantic_hash": "91d9eab2c881582a11f6d25e35b49cc2"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/views.view.frontpage.yml": {
+    "mtime": 1777470842.7831607,
+    "ast_hash": "a872f85117fcf8d54421798d792cff83",
+    "semantic_hash": "a872f85117fcf8d54421798d792cff83"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/views.view.glossary.yml": {
+    "mtime": 1777470842.7917914,
+    "ast_hash": "a818e8cbbb499878bfd09dc037b46a7c",
+    "semantic_hash": "a818e8cbbb499878bfd09dc037b46a7c"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/views.view.media.yml": {
+    "mtime": 1777470842.8081977,
+    "ast_hash": "930084e4d51bb19a80008a83b56b2112",
+    "semantic_hash": "930084e4d51bb19a80008a83b56b2112"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/views.view.media_library.yml": {
+    "mtime": 1777470842.8400095,
+    "ast_hash": "11e471bb7c01889e32d7b0ed849a8422",
+    "semantic_hash": "11e471bb7c01889e32d7b0ed849a8422"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/views.view.redirect.yml": {
+    "mtime": 1777470842.8557167,
+    "ast_hash": "e6845167adf93928daa31d7a12b14564",
+    "semantic_hash": "e6845167adf93928daa31d7a12b14564"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/views.view.redirect_404.yml": {
+    "mtime": 1777470842.867798,
+    "ast_hash": "ef0cdc4b90a3fd0fe0d5fa782e91222d",
+    "semantic_hash": "ef0cdc4b90a3fd0fe0d5fa782e91222d"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/views.view.taxonomy_term.yml": {
+    "mtime": 1777470842.8768117,
+    "ast_hash": "5f6997c5882e96eecd56f45391820543",
+    "semantic_hash": "5f6997c5882e96eecd56f45391820543"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/views.view.user_admin_people.yml": {
+    "mtime": 1777470842.9018693,
+    "ast_hash": "2e0f053951f9881cd12c58fd258e2f57",
+    "semantic_hash": "2e0f053951f9881cd12c58fd258e2f57"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/views.view.watchdog.yml": {
+    "mtime": 1777470842.920033,
+    "ast_hash": "9f20b7f09695d40e1c3f711a5fb966f8",
+    "semantic_hash": "9f20b7f09695d40e1c3f711a5fb966f8"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/views.view.who_s_new.yml": {
+    "mtime": 1777470842.9350076,
+    "ast_hash": "a8a500fc9ed2c1eede13e8581fa15610",
+    "semantic_hash": "a8a500fc9ed2c1eede13e8581fa15610"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/config/sync/views.view.who_s_online.yml": {
+    "mtime": 1777470842.943905,
+    "ast_hash": "9eea9f52b2d66797e3d36c59bcd49df7",
+    "semantic_hash": "9eea9f52b2d66797e3d36c59bcd49df7"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/docker/README.md": {
+    "mtime": 1772467003.6473708,
+    "ast_hash": "f8f976c8829a7ee736ad69339e52285b",
+    "semantic_hash": "f8f976c8829a7ee736ad69339e52285b"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/drush/README.md": {
+    "mtime": 1772466148.9404094,
+    "ast_hash": "b6dfced8bb4fd592feaf0b430c123243",
+    "semantic_hash": "b6dfced8bb4fd592feaf0b430c123243"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/drush/drush.yml": {
+    "mtime": 1772466148.940844,
+    "ast_hash": "4ddfc1a36418f720ce3ff448b50e2aaf",
+    "semantic_hash": "4ddfc1a36418f720ce3ff448b50e2aaf"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/drush/sites/self.site.yml": {
+    "mtime": 1772466148.9416697,
+    "ast_hash": "90a0c78aee7092b8d0519b9f0b601128",
+    "semantic_hash": "90a0c78aee7092b8d0519b9f0b601128"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/recipes/README.txt": {
+    "mtime": 1772466148.9428766,
+    "ast_hash": "819a9b0846d400d6791558bbc24ec1f0",
+    "semantic_hash": "819a9b0846d400d6791558bbc24ec1f0"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/web/INSTALL.txt": {
+    "mtime": 1772466148.9432335,
+    "ast_hash": "57c66fe598074a79464624fd2813a990",
+    "semantic_hash": "57c66fe598074a79464624fd2813a990"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/web/README.md": {
+    "mtime": 1772471554.9411194,
+    "ast_hash": "2a02e039259c20caa904b73152004fef",
+    "semantic_hash": "2a02e039259c20caa904b73152004fef"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/web/modules/README.txt": {
+    "mtime": 1772471555.0896482,
+    "ast_hash": "79ac87a7eddeb482676c33e8645fd292",
+    "semantic_hash": "79ac87a7eddeb482676c33e8645fd292"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/web/modules/custom/tailwind_hmr/tailwind_hmr.info.yml": {
+    "mtime": 1772466148.9446886,
+    "ast_hash": "e9979ddd8c716bf15211ddd41c12eb1d",
+    "semantic_hash": "e9979ddd8c716bf15211ddd41c12eb1d"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/web/modules/custom/tailwind_hmr/tailwind_hmr.services.yml": {
+    "mtime": 1772466148.9454572,
+    "ast_hash": "00f92e4746a8001abfbc2ff49062c0d9",
+    "semantic_hash": "00f92e4746a8001abfbc2ff49062c0d9"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/web/profiles/README.txt": {
+    "mtime": 1772471555.1096952,
+    "ast_hash": "35b65afe4ae40c9e4eb0edc5dee63448",
+    "semantic_hash": "35b65afe4ae40c9e4eb0edc5dee63448"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/web/robots.txt": {
+    "mtime": 1772471554.9666128,
+    "ast_hash": "495fd313ff822a3a02a2ba23f845a0d1",
+    "semantic_hash": "495fd313ff822a3a02a2ba23f845a0d1"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/web/sites/README.txt": {
+    "mtime": 1745053803.0,
+    "ast_hash": "c9f2d63096fd2cd6d8dcac3577487bd0",
+    "semantic_hash": "c9f2d63096fd2cd6d8dcac3577487bd0"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/web/sites/default/default.services.yml": {
+    "mtime": 1772572354.4034023,
+    "ast_hash": "b8bc3aedf640253452c759b1511ac0b4",
+    "semantic_hash": "b8bc3aedf640253452c759b1511ac0b4"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/web/sites/development.services.yml": {
+    "mtime": 1772572354.340174,
+    "ast_hash": "e6dc7bd4e573c9cfdbedf01edbb87f9d",
+    "semantic_hash": "e6dc7bd4e573c9cfdbedf01edbb87f9d"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/web/themes/README.txt": {
+    "mtime": 1772572354.2769885,
+    "ast_hash": "57a262ee582cdb048ce7a5ac75739e8d",
+    "semantic_hash": "57a262ee582cdb048ce7a5ac75739e8d"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/web/themes/custom/backend/backend.info.yml": {
+    "mtime": 1772466148.9461389,
+    "ast_hash": "88acc3aca3bb528cff52978f0bdf2b3d",
+    "semantic_hash": "88acc3aca3bb528cff52978f0bdf2b3d"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/web/themes/custom/tailwind/plugins/https_key/README.md": {
+    "mtime": 1772569394.493107,
+    "ast_hash": "9937c568ab5f9b6a4ed2b131e54708b7",
+    "semantic_hash": "9937c568ab5f9b6a4ed2b131e54708b7"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/web/themes/custom/tailwind/tailwind.info.yml": {
+    "mtime": 1772466148.9872231,
+    "ast_hash": "12945f03e77da2d2f341d0d61d24f686",
+    "semantic_hash": "12945f03e77da2d2f341d0d61d24f686"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/web/themes/custom/tailwind/tailwind.libraries.yml": {
+    "mtime": 1772466148.9875307,
+    "ast_hash": "5dfeeaf9355d2ed1dbc6de2db4250917",
+    "semantic_hash": "5dfeeaf9355d2ed1dbc6de2db4250917"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/web/themes/custom/tailwind/logo.svg": {
+    "mtime": 1772466148.9483304,
+    "ast_hash": "760a3ee424f40cd7b8da50ac4818592f",
+    "semantic_hash": "760a3ee424f40cd7b8da50ac4818592f"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/web/themes/custom/tailwind/screenshot.png": {
+    "mtime": 1772466148.9510977,
+    "ast_hash": "c40475dce4bc3872e531b453610ddada",
+    "semantic_hash": "c40475dce4bc3872e531b453610ddada"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/web/themes/custom/tailwind/src/fonts/Luciole-Bold.svg": {
+    "mtime": 1772466148.9601853,
+    "ast_hash": "2147a1eef08b8eba376cebd99e52bf25",
+    "semantic_hash": "2147a1eef08b8eba376cebd99e52bf25"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/web/themes/custom/tailwind/src/fonts/Luciole-BoldItalic.svg": {
+    "mtime": 1772466148.9666493,
+    "ast_hash": "8c292b17e7eea4cfc63c6e7f613a31f4",
+    "semantic_hash": "8c292b17e7eea4cfc63c6e7f613a31f4"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/web/themes/custom/tailwind/src/fonts/Luciole-Italic.svg": {
+    "mtime": 1772466148.972343,
+    "ast_hash": "2956a163ca414c4ef615b18f7d249af8",
+    "semantic_hash": "2956a163ca414c4ef615b18f7d249af8"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/web/themes/custom/tailwind/src/fonts/Luciole-Regular.svg": {
+    "mtime": 1772466148.9785128,
+    "ast_hash": "2152dd0bda21e4b41fa2b1da6e636903",
+    "semantic_hash": "2152dd0bda21e4b41fa2b1da6e636903"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/web/themes/custom/tailwind/src/images/image-sample-horizontal.jpg": {
+    "mtime": 1772466148.984132,
+    "ast_hash": "e9fd6c9ec2d105c1ce550ac3d9282ef2",
+    "semantic_hash": "e9fd6c9ec2d105c1ce550ac3d9282ef2"
+  },
+  "/Users/maxime/Sites/tailwindcss4-drupal/web/themes/custom/tailwind/src/images/image-sample-vertically.jpg": {
+    "mtime": 1772466148.9857986,
+    "ast_hash": "3e904e1655e504af25aae2c45715f811",
+    "semantic_hash": "3e904e1655e504af25aae2c45715f811"
+  }
+}

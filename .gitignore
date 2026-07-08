@@ -10,8 +10,9 @@
 /web/profiles/contrib/
 /web/libraries/
 
-# Ignore sensitive information.
-/web/sites/*/settings.php
+# settings.php is tracked (env-aware bootstrap for prod/local).
+# Only local override files and secrets are ignored:
+/web/sites/*/settings.local.php
 
 # Ignore Drupal's file directory.
 /web/sites/*/files/
@@ -31,3 +32,9 @@
 **/.gitignore
 /.idea
 *.gz
+
+# Personal Claude Code instructions (not team-shared).
+/CLAUDE.local.md
+
+graphify-out/cost.json        # local only
+# graphify-out/cache/         # optional: commit for speed, skip to keep repo small

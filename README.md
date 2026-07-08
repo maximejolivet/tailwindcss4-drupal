@@ -85,3 +85,5 @@ Instead of /src/css/tailwind.css, use /css/tailwind.css.
 ```
 
 The page needs to reload with the HMR changes
+
+Source : https://www.luklagroup.com/web-marketing/drupal-11-nouveautes-avantages-et-migration/

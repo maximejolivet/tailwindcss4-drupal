@@ -42,46 +42,92 @@
  * @see html.html.twig
  */
 #}
-<div class="layout-container">
+<div class="flex min-h-screen flex-col font-base text-black">
 
-  <header role="banner">
-    {{ page.header }}
+  <header role="banner" class="sticky top-0 z-50 bg-primary shadow-md">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-3">
+      {{ page.header }}
+    </div>
   </header>
 
-  {{ page.primary_menu }}
-  {{ page.secondary_menu }}
+  {% if page.primary_menu %}
+    <nav role="navigation" aria-label="{{ 'Main navigation'|t }}" class="border-b border-light-grey bg-white">
+      <div class="mx-auto max-w-7xl px-4">
+        {{ page.primary_menu }}
+      </div>
+    </nav>
+  {% endif %}
 
-  {{ page.breadcrumb }}
+  {% if page.secondary_menu %}
+    <nav role="navigation" aria-label="{{ 'Secondary navigation'|t }}" class="bg-very-light-grey">
+      <div class="mx-auto max-w-7xl px-4">
+        {{ page.secondary_menu }}
+      </div>
+    </nav>
+  {% endif %}
 
-  {{ page.highlighted }}
+  {% if page.breadcrumb %}
+    <div class="border-b border-light-grey bg-white">
+      <div class="mx-auto max-w-7xl px-4 py-2 text-sm text-dark-grey">
+        {{ page.breadcrumb }}
+      </div>
+    </div>
+  {% endif %}
 
-  {{ page.help }}
+  {% if page.highlighted %}
+    <div class="bg-secondary/20">
+      <div class="mx-auto max-w-7xl px-4 py-4">
+        {{ page.highlighted }}
+      </div>
+    </div>
+  {% endif %}
 
-  <main role="main">
-    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+  {% if page.help %}
+    <div class="bg-info-light">
+      <div class="mx-auto max-w-7xl px-4 py-3 text-sm">
+        {{ page.help }}
+      </div>
+    </div>
+  {% endif %}
 
-    <div class="layout-content">
-      {{ page.content }}
-    </div>{# /.layout-content #}
+  <main role="main" class="grow py-8">
+    <a id="main-content" tabindex="-1"></a>
 
-    {% if page.sidebar_first %}
-      <aside class="layout-sidebar-first" role="complementary">
-        {{ page.sidebar_first }}
-      </aside>
+    {% if page.sidebar_first or page.sidebar_second %}
+      <div class="mx-auto max-w-7xl px-4">
+        <div class="flex gap-8">
+
+          {% if page.sidebar_first %}
+            <aside role="complementary" class="w-64 shrink-0">
+              {{ page.sidebar_first }}
+            </aside>
+          {% endif %}
+
+          <div class="min-w-0 grow">
+            {{ page.content }}
+          </div>
+
+          {% if page.sidebar_second %}
+            <aside role="complementary" class="w-64 shrink-0">
+              {{ page.sidebar_second }}
+            </aside>
+          {% endif %}
+
+        </div>
+      </div>
+    {% else %}
+      <div class="mx-auto max-w-7xl px-4">
+        {{ page.content }}
+      </div>
     {% endif %}
-
-    {% if page.sidebar_second %}
-      <aside class="layout-sidebar-second" role="complementary">
-        {{ page.sidebar_second }}
-      </aside>
-    {% endif %}
-
   </main>
 
   {% if page.footer %}
-    <footer role="contentinfo">
-      {{ page.footer }}
+    <footer role="contentinfo" class="bg-black text-white">
+      <div class="mx-auto max-w-7xl px-4 py-8">
+        {{ page.footer }}
+      </div>
     </footer>
   {% endif %}
 
-</div>{# /.layout-container #}
+</div>
