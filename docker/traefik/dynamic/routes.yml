@@ -1,0 +1,38 @@
+http:
+  routers:
+    drupal:
+      rule: Host(`tailwind.localhost`)
+      entryPoints:
+        - websecure
+      tls: {}
+      service: drupal
+
+    pma:
+      rule: Host(`pma.tailwind.localhost`)
+      entryPoints:
+        - websecure
+      tls: {}
+      service: pma
+
+    mailhog:
+      rule: Host(`mail.tailwind.localhost`)
+      entryPoints:
+        - websecure
+      tls: {}
+      service: mailhog
+
+  services:
+    drupal:
+      loadBalancer:
+        servers:
+          - url: http://php:80
+
+    pma:
+      loadBalancer:
+        servers:
+          - url: http://phpmyadmin:80
+
+    mailhog:
+      loadBalancer:
+        servers:
+          - url: http://mailhog:8025
