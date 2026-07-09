@@ -1,4 +1,4 @@
-.PHONY: start stop restart restart-traefik status logs dockhand-register composer certs package dev build drush
+.PHONY: start stop restart restart-traefik status logs dockhand-register composer composer-install composer-update install certs package dev build drush
 
 # Base docker compose invocation: compose file lives in docker/, but the
 # project directory stays the repo root so bind mounts (e.g. .:/var/www/html)
@@ -36,6 +36,18 @@ dockhand-register:
 # Run Composer commands (php service). Usage: `make composer install`.
 composer:
 	$(COMPOSE) exec php composer $(filter-out $@,$(MAKECMDGOALS))
+
+# Install Composer dependencies (php service).
+composer-install:
+	$(COMPOSE) exec php composer install
+
+# Update Composer dependencies (php service).
+composer-update:
+	$(COMPOSE) exec php composer update
+
+# Install Drupal from existing configuration (php service).
+install:
+	$(COMPOSE) exec php vendor/bin/drush site:install --existing-config -y
 
 # Generate a local SSL certificate with mkcert (host, not a container).
 certs:
