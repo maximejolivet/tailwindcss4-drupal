@@ -1,10 +1,10 @@
-# Architecture front — SDC, Tailwind v4, page builder Paragraphs
+# ARCHITECTURE FRONTEND — SDC, TAILWIND V4, PAGE BUILDER PARAGRAPHS
 
 Ce document est le point d'entrée pour comprendre comment le thème `tailwind`
 (`web/themes/custom/tailwind`) est construit et comment l'étendre sans casser
 les garanties qui le rendent industrialisable sur plusieurs projets d'agence.
 
-## 1. Vue d'ensemble
+## 1. VUE D'ENSEMBLE
 
 ```
 Vite + Tailwind v4 (CSS-first)
@@ -23,7 +23,7 @@ badge, tag, icon, hero) + les composants dérivés nécessaires au page builder
 `web/themes/custom/tailwind`. La configuration Paragraphs/traduction/langue
 est dans `config/sync/`.
 
-## 2. Quand créer un composant SDC vs un template Drupal classique
+## 2. QUAND CRÉER UN COMPOSANT SDC VS UN TEMPLATE DRUPAL CLASSIQUE
 
 **Composant SDC** (`components/`) quand le morceau d'UI :
 - a une identité visuelle propre, réutilisable en dehors d'un contexte de
@@ -49,7 +49,7 @@ seules exceptions du projet sont documentées et volontaires :
 props) et les templates de layout (`layouts/*.twig`, qui *sont* de la
 structure de mise en page par définition — pas du contenu).
 
-## 3. Stratégie de tokens inter-projets
+## 3. STRATÉGIE DE TOKENS INTER-PROJETS
 
 Tout le vocabulaire de design vit dans le bloc `@theme` de `src/css/main.css`
 — couleurs sémantiques (`--color-primary`, `--color-surface`,
@@ -71,7 +71,7 @@ besoin d'une variante de composant que le socle n'a pas, l'ajouter dans
 `props.*.enum` en amont dans le composant partagé plutôt que de forker le
 composant — sinon la maintenance multi-projets diverge dès le premier écart.
 
-## 4. Traduction symétrique (Paragraphs)
+## 4. TRADUCTION SYMÉTRIQUE (PARAGRAPHS)
 
 `field_sections` (node) et les champs `entity_reference_revisions` internes
 aux paragraphes (`field_cards`, `field_items`) sont **non traduisibles**. Les
@@ -96,7 +96,7 @@ Le champ `field_variant` partagé (list_string, valeurs synchronisées avec le
 schéma SDC comme source de vérité unique des variantes, plutôt que de
 dupliquer l'énumération dans la configuration de champ.
 
-## 5. Points à vérifier avant mise en production
+## 5. POINTS À VÉRIFIER AVANT MISE EN PRODUCTION
 
 Deux fichiers de configuration contiennent des réglages spécifiques au
 module contrib Layout Paragraphs reconstruits de mémoire (pas vérifiés contre
@@ -116,7 +116,7 @@ Suivre le processus déjà documenté dans `.claude/CLAUDE.md` : configurer une
 fois via l'UI, puis `drush config:export --diff` pour réconcilier avant tout
 déploiement réel.
 
-## 6. Stratégie Drupal Canvas
+## 6. STRATÉGIE DRUPAL CANVAS
 
 Les SDC sont conçus comme le socle commun avant une bascule vers Drupal
 Canvas : props/slots typés, zéro logique de rendu dans les templates
