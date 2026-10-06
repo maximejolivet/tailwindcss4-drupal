@@ -1,104 +1,323 @@
-# Commandes Docker
+# Docker & Environment Setup
 
-Environnement de développement local basé sur `docker-compose.yml` (services : `traefik`, `php`, `database`, `node`, `phpmyadmin`, `mailhog`, `dockhand`).
+Complete guide for the Docker Compose development environment.
 
-## Démarrer / arrêter
+## Quick Commands
+
+Use the `Makefile` for quick access to common commands:
 
 ```bash
-# Démarrer tous les services en arrière-plan
+make start           # Start all containers (docker compose up -d)
+make stop            # Stop containers (docker compose stop)
+make restart         # Restart all containers
+make status          # Show container status (docker compose ps)
+make logs            # Follow all container logs
+make help            # Show available commands and URLs
+make system          # Display Drupal version and system status
+```
+
+## Docker Compose Services
+
+The environment runs 7 services defined in `docker/docker-compose.yml`:
+
+| Service | Image | Port(s) | Purpose |
+|---------|-------|---------|---------|
+| **traefik** | traefik:v3.5 | 80, 443 | Reverse proxy, SSL termination, routing |
+| **php** | Custom (docker/apache/Dockerfile) | 80 | Apache + PHP-FPM for Drupal |
+| **database** | mariadb:11 | 3306 | MySQL/MariaDB database |
+| **node** | node:24 | 3009, 6006 | Node.js runtime (Vite dev server) |
+| **phpmyadmin** | phpmyadmin:5 | 80 | MySQL/MariaDB web admin interface |
+| **mailhog** | mailhog/mailhog:v1.0.1 | 1025, 8025 | SMTP server + web UI for email testing |
+| **dockhand** | fnsys/dockhand:latest | 3000 | Docker Compose web admin interface |
+
+⚠️ **Security Note**: The `dockhand` service mounts `/var/run/docker.sock`, giving it full access to your host's Docker daemon (all containers, not just this project).
+
+## URLs (via Traefik)
+
+Access these URLs in your browser:
+
+| URL | Service | User/Password |
+|-----|---------|---------------|
+| https://tailwind.localhost | Drupal site | — |
+| https://pma.tailwind.localhost | PHPMyAdmin | drupal11 / drupal11 |
+| https://mail.tailwind.localhost | MailHog | — |
+| https://localhost:3009 | Vite Dev Server (HMR) | — |
+| http://localhost:3000 | Dockhand Docker Admin | — |
+
+**Note**: For HTTPS, install the local CA with `mkcert -install` once per machine.
+
+## Managing Containers
+
+### Start / Stop / Restart
+
+```bash
+# Start all containers in background
 docker compose up -d
 
-# Arrêter et supprimer les conteneurs (les volumes, ex. db-data, sont conservés)
-docker compose down
-
-# Arrêter les conteneurs sans les supprimer
+# Stop containers (preserve volumes like database)
 docker compose stop
 
-# Redémarrer tous les services
+# Stop and remove containers (volumes remain)
+docker compose down
+
+# Restart all containers
 docker compose restart
 
-# Redémarrer un seul service
+# Restart a specific container
 docker compose restart php
 ```
 
-Raccourcis équivalents via `Makefile` :
+### View Status & Logs
 
 ```bash
-make start     # docker compose up -d
-make stop      # docker compose stop
-make restart   # docker compose restart
-make status    # docker compose ps
-make logs      # docker compose logs -f
-```
-
-## Suivi
-
-```bash
-# État des conteneurs
+# List all containers and their status
 docker compose ps
 
-# Logs de tous les services
+# Follow logs from all services
 docker compose logs -f
 
-# Logs d'un service précis
+# Follow logs from specific service
 docker compose logs -f php
+
+# View last 50 lines of PHP logs
+docker compose logs -n 50 php
 ```
 
-## Build
+### Rebuild Images
 
 ```bash
-# Reconstruire l'image PHP après modification de docker/apache/Dockerfile
+# Rebuild PHP image (after editing docker/apache/Dockerfile)
 docker compose build php
 
-# Rebuild puis redémarrage si nécessaire
+# Rebuild and restart
 docker compose up -d --build
+
+# Rebuild without cache
+docker compose build --no-cache php
 ```
 
-## Accès aux conteneurs
+## Accessing Services
+
+### PHP Container (Drupal)
 
 ```bash
-# Shell dans le conteneur PHP
+# Open shell in PHP container
 docker compose exec php bash
 
-# Commande Drush
-docker compose exec php drush cr
+# Run Drush commands
+docker compose exec php vendor/bin/drush status
+docker compose exec php vendor/bin/drush cache:rebuild
 
-# Accès direct à la base de données
-docker compose exec database mariadb -u"$MYSQL_USER" -p"$MYSQL_PASSWORD" "$MYSQL_DATABASE"
+# Run Composer commands
+docker compose exec php composer install
+docker compose exec php composer update
+
+# Clear Drupal cache
+docker compose exec php vendor/bin/drush cr
 ```
 
-## URLs locales (via Traefik)
+### Database
 
-| URL | Service |
-|---|---|
-| https://tailwind.localhost | Site Drupal |
-| https://pma.tailwind.localhost | phpMyAdmin |
-| https://mail.tailwind.localhost | Mailhog |
-| https://localhost:3009 | Serveur de dev Vite (HMR) |
-| http://localhost:3000 | Dockhand (admin Docker) |
+```bash
+# Connect to MariaDB (interactive)
+docker compose exec database mariadb -udrupal11 -pdrupal11 drupal11
 
-## Services
+# Backup database
+docker compose exec database mysqldump -udrupal11 -pdrupal11 drupal11 > backup.sql
 
-| Service | Image | Rôle |
-|---|---|---|
-| traefik | traefik:v3.5 | Reverse proxy HTTPS local |
-| php | build `docker/apache` | Apache + PHP-FPM pour Drupal |
-| database | mariadb:11 | Base de données |
-| node | node:22 | Serveur de dev Vite |
-| phpmyadmin | phpmyadmin:5 | Interface d'admin MySQL |
-| mailhog | mailhog/mailhog:v1.0.1 | Capture des emails sortants |
-| dockhand | fnsys/dockhand:latest | Interface web de gestion Docker ([dockhand.pro](https://dockhand.pro/)) |
+# Restore database
+docker compose exec -T database mysql -udrupal11 -pdrupal11 drupal11 < backup.sql
+```
 
-⚠️ Le service `dockhand` monte `/var/run/docker.sock` : il a un accès complet au démon Docker de la machine hôte (tous les conteneurs, pas seulement ceux de ce projet).
+### Node Container
 
-## Enregistrer le stack dans Dockhand
+```bash
+# Run npm commands
+docker compose exec node npm run dev
+docker compose exec node npm run build
+docker compose exec node npm install
+
+# Open shell
+docker compose exec node sh
+```
+
+## Traefik Configuration
+
+Traefik acts as the reverse proxy, routing requests by hostname to the correct container.
+
+### Static Configuration
+
+Located in `docker-compose.yml` `traefik` service `command:` section:
+- Entrypoints: `web` (port 80, redirects to HTTPS) and `websecure` (port 443)
+- Providers: File provider for dynamic config with file watching enabled
+
+### Dynamic Configuration
+
+Located in `docker/traefik/`:
+
+**routes.yml** — Routers and services:
+```yaml
+http:
+  routers:
+    drupal:
+      rule: "Host(`tailwind.localhost`)"
+      service: drupal
+  services:
+    drupal:
+      loadBalancer:
+        servers:
+          - url: "http://php"
+```
+
+**tls.yml** — SSL certificates and TLS configuration
+
+Changes to these files are picked up automatically (watched by Traefik).
+
+### Adding a New Route
+
+1. Edit `docker/traefik/dynamic/routes.yml`
+2. Add a router and service following the existing pattern
+3. Traefik will apply it automatically (no restart needed)
+
+Example: Route to a new service
+```yaml
+http:
+  routers:
+    myservice:
+      rule: "Host(`myservice.tailwind.localhost`)"
+      service: myservice
+  services:
+    myservice:
+      loadBalancer:
+        servers:
+          - url: "http://my-container:8080"
+```
+
+## SSL Certificates (mkcert)
+
+Local HTTPS certificates are generated with [mkcert](https://github.com/FiloSottile/mkcert).
+
+### Install Local CA (one time)
+
+```bash
+# Install the local certificate authority
+mkcert -install
+```
+
+This allows your browser to trust local certificates without warnings.
+
+### Generate / Regenerate Certificates
+
+```bash
+make certs
+```
+
+Or manually:
+
+```bash
+mkcert -cert-file docker/traefik/certs/tailwind.localhost.pem \
+       -key-file docker/traefik/certs/tailwind.localhost-key.pem \
+       tailwind.localhost "*.tailwind.localhost"
+```
+
+## Dockhand Integration
+
+[Dockhand](https://dockhand.pro) is a web UI for Docker Compose management.
+
+### Register This Stack
 
 ```bash
 make dockhand-register
 ```
 
-Exécute `docker/dockhand-register.sh`, qui appelle l'API Dockhand pour :
-1. créer un environnement Docker local (`socket:/var/run/docker.sock`) s'il n'en existe pas encore ;
-2. enregistrer `docker-compose.yml` comme stack `tailwindcss4-drupal` (sans redémarrer les conteneurs déjà lancés).
+This runs `docker/dockhand-register.sh` to:
+1. Create a Docker environment (`socket:/var/run/docker.sock`)
+2. Register `docker-compose.yml` as stack `tailwindcss4-drupal`
 
-Si l'authentification Dockhand est activée, définir `DOCKHAND_USER` et `DOCKHAND_PASSWORD` (ex. dans `.env`, non commité) avant de lancer la commande.
+Then access Dockhand at http://localhost:3000 to manage containers visually.
+
+### Authentication
+
+If Dockhand requires authentication, set environment variables:
+
+```bash
+# In .env (not committed)
+DOCKHAND_USER=myusername
+DOCKHAND_PASSWORD=mypassword
+```
+
+Then run `make dockhand-register`.
+
+## Environment File (.env)
+
+Docker Compose loads environment variables from `docker/.env` if present.
+
+**Example:**
+```bash
+MYSQL_DATABASE=drupal11
+MYSQL_USER=drupal11
+MYSQL_PASSWORD=drupal11
+MYSQL_ROOT_PASSWORD=drupal11
+DRUPAL_HASH_SALT=your-salt-here
+DOCKHAND_USER=
+DOCKHAND_PASSWORD=
+```
+
+**Security**: This file is Git-ignored. Never commit credentials.
+
+## Troubleshooting
+
+### "no configuration file provided" or socket error
+
+Make sure Colima (macOS) or Docker is running:
+```bash
+colima start    # macOS
+docker version  # Verify Docker is running
+```
+
+### Container won't start
+
+Check logs:
+```bash
+docker compose logs -f php
+```
+
+Common issues:
+- Port already in use (change port in docker-compose.yml)
+- Volume mount issue (verify paths in docker-compose.yml)
+- Image build failure (run `docker compose build --no-cache php`)
+
+### Database connection issues
+
+Verify database is running:
+```bash
+docker compose ps database
+docker compose logs database
+```
+
+Check credentials in `.env` and Drupal's `settings.php`:
+```php
+$databases['default']['default'] = [
+  'driver' => 'mysql',
+  'database' => 'drupal11',
+  'username' => 'drupal11',
+  'password' => 'drupal11',
+  'host' => 'database',
+  'port' => 3306,
+];
+```
+
+### Slow performance on macOS
+
+Colima resource allocation might be too low. Increase:
+```bash
+colima stop
+colima start --cpu 4 --memory 4 --disk 60
+```
+
+## Reference
+
+- **Docker Compose Docs**: https://docs.docker.com/compose/
+- **Traefik Docs**: https://doc.traefik.io/traefik/
+- **mkcert**: https://github.com/FiloSottile/mkcert
+- **Colima (macOS)**: https://github.com/abiosoft/colima
