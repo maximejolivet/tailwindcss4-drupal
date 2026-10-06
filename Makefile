@@ -7,6 +7,19 @@ COMPOSE = docker compose -f docker/docker-compose.yml --project-directory .
 
 # Display help message with available targets.
 help:
+	@echo ""
+	@echo "🌐 URLs Accessibles"
+	@echo "  Drupal              : https://tailwind.localhost"
+	@echo "  Vite HMR            : https://localhost:3009"
+	@echo "  PHPMyAdmin          : http://localhost (user: drupal11)"
+	@echo "  MailHog             : http://localhost:8025"
+	@echo "  Dockhand            : http://localhost:3000"
+	@echo ""
+	@$(COMPOSE) exec php vendor/bin/drush status --field=drupal-version 2>/dev/null | awk '{print "💾 État Drupal : version " $$0}' || echo "💾 État Drupal : ---"
+	@$(COMPOSE) exec php vendor/bin/drush config:status 2>&1 | grep -q "No differences" && echo "    Configuration : ✅ Synchronisée" || echo "    Configuration : ⚠️  Non synchronisée"
+	@echo ""
+	@echo "📋 Commandes Disponibles"
+	@echo ""
 	@echo "🐳 Docker Services"
 	@echo "  make start              - Démarre Colima et tous les conteneurs"
 	@echo "  make stop               - Arrête les conteneurs"
@@ -30,7 +43,8 @@ help:
 	@echo ""
 	@echo "🧠 Drupal / Drush"
 	@echo "  make drush <cmd>        - Exécute une commande Drush"
-	@echo "  make system             - Affiche l'état du système et des versions"
+	@echo "  make system             - Affiche l'état complet du système"
+	@echo ""
 
 # Start all containers in the background.
 start:
