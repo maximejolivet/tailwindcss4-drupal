@@ -12,16 +12,16 @@ services:
       - '80:80'
       - '443:443'
     volumes:
-      - ./docker/traefik/dynamic:/etc/traefik/dynamic:ro
-      - ./docker/traefik/certs:/etc/traefik/certs:ro
+      - ./traefik/dynamic:/etc/traefik/dynamic:ro
+      - ./traefik/certs:/etc/traefik/certs:ro
     networks:
       - drupal
 
   php:
     build:
-      context: ./docker/apache
+      context: ./apache
     volumes:
-      - .:/var/www/html
+      - ..:/var/www/html
     env_file:
       - .env
     depends_on:
@@ -45,7 +45,7 @@ services:
     image: node:24
     working_dir: /var/www/html
     volumes:
-      - .:/var/www/html
+      - ..:/var/www/html
     env_file:
       - .env
     ports:
