@@ -1,9 +1,37 @@
-.PHONY: start stop restart restart-traefik status logs dockhand-register composer composer-install composer-update install certs package dev build drush
+.PHONY: help start stop restart restart-traefik status logs dockhand-register composer composer-install composer-update install certs package dev build storybook build-storybook drush
 
 # Base docker compose invocation: compose file lives in docker/, but the
 # project directory stays the repo root so bind mounts (e.g. .:/var/www/html)
 # resolve correctly.
 COMPOSE = docker compose -f docker/docker-compose.yml --project-directory .
+
+# Display help message with available targets.
+help:
+	@echo "🐳 Docker Services"
+	@echo "  make start              - Démarre Colima et tous les conteneurs"
+	@echo "  make stop               - Arrête les conteneurs"
+	@echo "  make restart            - Redémarre tous les conteneurs"
+	@echo "  make restart-traefik    - Redémarre uniquement Traefik"
+	@echo "  make status             - Affiche l'état des conteneurs"
+	@echo "  make logs               - Affiche les logs en temps réel"
+	@echo "  make dockhand-register  - Enregistre la stack dans Dockhand"
+	@echo ""
+	@echo "📦 PHP / Composer"
+	@echo "  make composer <cmd>     - Exécute une commande Composer"
+	@echo "  make composer-install   - Installe les dépendances Composer"
+	@echo "  make composer-update    - Met à jour les dépendances Composer"
+	@echo "  make install            - Installe Drupal depuis la configuration"
+	@echo "  make certs              - Génère un certificat SSL local"
+	@echo ""
+	@echo "🎨 Frontend / Node.js"
+	@echo "  make package            - Installe les dépendances Node.js"
+	@echo "  make dev                - Lance le serveur Vite avec HMR"
+	@echo "  make build              - Build les assets pour la production"
+	@echo "  make storybook          - Lance Storybook en développement"
+	@echo "  make build-storybook    - Build Storybook pour la production"
+	@echo ""
+	@echo "🧠 Drupal / Drush"
+	@echo "  make drush <cmd>        - Exécute une commande Drush"
 
 # Start all containers in the background.
 start:
@@ -64,6 +92,14 @@ dev:
 # Build the theme assets for production (node service).
 build:
 	$(COMPOSE) exec node npm run build
+
+# Start the Storybook dev server (node service).
+storybook:
+	$(COMPOSE) exec node npm run storybook
+
+# Build a static Storybook export for production (node service).
+build-storybook:
+	$(COMPOSE) exec node npm run build-storybook
 
 # Run Drush commands (php service). Usage: `make drush <command>`.
 drush:
