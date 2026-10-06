@@ -1,4 +1,4 @@
-.PHONY: help start stop restart restart-traefik status logs dockhand-register composer composer-install composer-update install certs package dev build storybook build-storybook drush
+.PHONY: help start stop restart restart-traefik status logs dockhand-register composer composer-install composer-update install certs package dev build drush
 
 # Base docker compose invocation: compose file lives in docker/, but the
 # project directory stays the repo root so bind mounts (e.g. .:/var/www/html)
@@ -27,8 +27,6 @@ help:
 	@echo "  make package            - Installe les dépendances Node.js"
 	@echo "  make dev                - Lance le serveur Vite avec HMR"
 	@echo "  make build              - Build les assets pour la production"
-	@echo "  make storybook          - Lance Storybook en développement"
-	@echo "  make build-storybook    - Build Storybook pour la production"
 	@echo ""
 	@echo "🧠 Drupal / Drush"
 	@echo "  make drush <cmd>        - Exécute une commande Drush"
@@ -92,14 +90,6 @@ dev:
 # Build the theme assets for production (node service).
 build:
 	$(COMPOSE) exec node npm run build
-
-# Start the Storybook dev server (node service).
-storybook:
-	$(COMPOSE) exec node npm run storybook
-
-# Build a static Storybook export for production (node service).
-build-storybook:
-	$(COMPOSE) exec node npm run build-storybook
 
 # Run Drush commands (php service). Usage: `make drush <command>`.
 drush:
