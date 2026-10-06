@@ -1,4 +1,4 @@
-.PHONY: help start stop restart restart-traefik status logs dockhand-register composer composer-install composer-update install certs package dev build drush
+.PHONY: help start stop restart restart-traefik status logs dockhand-register composer composer-install composer-update install certs package dev build drush system
 
 # Base docker compose invocation: compose file lives in docker/, but the
 # project directory stays the repo root so bind mounts (e.g. .:/var/www/html)
@@ -30,6 +30,7 @@ help:
 	@echo ""
 	@echo "🧠 Drupal / Drush"
 	@echo "  make drush <cmd>        - Exécute une commande Drush"
+	@echo "  make system             - Affiche l'état du système et des versions"
 
 # Start all containers in the background.
 start:
@@ -94,6 +95,26 @@ build:
 # Run Drush commands (php service). Usage: `make drush <command>`.
 drush:
 	$(COMPOSE) exec php vendor/bin/drush $(filter-out $@,$(MAKECMDGOALS))
+
+# Display system status and version information.
+system:
+	@echo "📊 État du Système"
+	@echo ""
+	@echo "🐘 Drupal"
+	@$(COMPOSE) exec php vendor/bin/drush status --field=drupal-version 2>/dev/null | awk '{print "  Version actuelle   : " $$0}'
+	@echo "  Version LTS        : 11.x (support jusqu'à novembre 2026)"
+	@$(COMPOSE) exec php vendor/bin/drush status --field=db-driver 2>/dev/null | awk '{print "  Base de données    : " $$0}'
+	@echo ""
+	@echo "⚙️ Environnement"
+	@$(COMPOSE) exec php php -v 2>/dev/null | head -1 | awk '{print "  PHP                : " $$2}'
+	@$(COMPOSE) exec php vendor/bin/drush status --field=drush-version 2>/dev/null | awk '{print "  Drush              : " $$0}'
+	@echo ""
+	@echo "🐳 Docker Containers"
+	@$(COMPOSE) ps --quiet | wc -l | awk '{print "  Total containers   : " $$0}'
+	@$(COMPOSE) ps --filter "status=running" --quiet | wc -l | awk '{print "  Running            : " $$0}'
+	@echo ""
+	@echo "✅ Configuration"
+	@$(COMPOSE) exec php vendor/bin/drush config:status 2>&1 | grep -i "differences" | head -1
 
 # Swallow extra arguments passed to `make drush ...` so make doesn't try
 # to treat them as targets of their own.
