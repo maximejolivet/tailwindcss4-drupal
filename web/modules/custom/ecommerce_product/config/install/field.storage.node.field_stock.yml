@@ -1,0 +1,16 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_stock
+field_name: field_stock
+entity_type: node
+type: integer
+settings: {  }
+module: core
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

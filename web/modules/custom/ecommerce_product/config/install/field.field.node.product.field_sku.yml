@@ -1,0 +1,34 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sku
+    - node.type.product
+  module:
+    - text
+id: node.product.field_sku
+field_name: field_sku
+entity_type: node
+bundle: product
+label: SKU
+description: 'Unique product identifier'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
+widget:
+  type: string_textfield
+  label: SKU
+  settings:
+    size: 60
+    placeholder: ''
+  weight: 1
+display:
+  default:
+    label: inline
+    type: string
+    settings:
+      link_to_entity: false
+    weight: 1
