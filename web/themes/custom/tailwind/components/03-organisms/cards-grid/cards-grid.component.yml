@@ -1,0 +1,18 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: 'Cards grid'
+status: stable
+group: Organisms
+description: 'Responsive grid wrapper for a set of pre-rendered tailwind:card items. The caller loops over its child items and renders each as a card; this component only owns the grid.'
+props:
+  type: object
+  properties:
+    columns:
+      type: integer
+      title: Columns
+      description: 'Column count at the largest breakpoint.'
+      enum: [2, 3, 4]
+      default: 3
+slots:
+  items:
+    title: Items
+    description: 'Concatenated markup of the individual tailwind:card components.'

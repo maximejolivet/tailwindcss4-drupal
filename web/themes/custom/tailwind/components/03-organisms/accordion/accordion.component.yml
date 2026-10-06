@@ -1,0 +1,12 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Accordion
+status: stable
+group: Organisms
+description: 'Wraps a set of pre-rendered tailwind:accordion-item components with a shared divider. No JS: each item is a native <details>/<summary>.'
+props:
+  type: object
+  properties: {  }
+slots:
+  items:
+    title: Items
+    description: 'Concatenated markup of the individual tailwind:accordion-item components.'

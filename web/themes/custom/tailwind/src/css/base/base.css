@@ -1,9 +1,34 @@
 /* ==========================================================================
    Base
+   ==========================================================================
+
+   Preflight (Tailwind's reset, bundled with `@import "tailwindcss"` in
+   main.css) is active. It strips default browser/user-agent styling on
+   every element, including markup injected by contrib modules that ship
+   their own CSS (CKEditor toolbars excluded via ckeditor.css, Views exposed
+   filters, admin_toolbar, media library widgets, etc.).
+
+   Restyling strategy for contrib markup:
+   - Prefer contrib's own "no CSS" / bare-HTML display mode when available
+     (e.g. Views "unformatted list" style) so Preflight-reset markup is
+     restyled with Tailwind utilities directly in the overridden template,
+     the same as any other component.
+   - When a contrib module has no template to override (JS-rendered
+     widgets, third-party libraries), scope a targeted override to that
+     module's wrapper class instead of undoing Preflight globally — see
+     ckeditor.css for the CKEditor iframe example, which is intentionally
+     excluded from Preflight because it renders inside its own document.
+   - Never disable Preflight to "fix" a contrib module; that reintroduces
+     inconsistent browser defaults everywhere else in the theme.
    ========================================================================== */
 
-@layer base {
-  body {
-    @apply bg-primary font-base;
-  }
+body {
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  font-family: var(--font-base);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
 }

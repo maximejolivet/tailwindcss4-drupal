@@ -1,0 +1,9 @@
+<details{{ attributes.addClass('group py-4') }}>
+  <summary class="flex cursor-pointer list-none items-center justify-between gap-4 font-semibold text-text focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
+    {% block title %}{{ title|default('') }}{% endblock %}
+    <span class="shrink-0 text-text-muted transition-transform duration-150 group-open:rotate-180">
+      {% include 'tailwind:icon' with { name: 'chevron-down', size: 'sm' } only %}
+    </span>
+  </summary>
+  <div class="pt-3 text-text-muted">{% block content %}{{ content|default('') }}{% endblock %}</div>
+</details>

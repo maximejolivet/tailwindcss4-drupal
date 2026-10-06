@@ -1,0 +1,19 @@
+name: Basic
+props:
+  variant: vertical
+  heading_level: 3
+slots:
+  image:
+    type: image
+    uri: 'https://placehold.co/600x400'
+    attributes:
+      class: 'h-48 w-full object-cover'
+  title: 'Titre de la carte'
+  content: 'Un résumé court décrivant le contenu de la carte.'
+  footer:
+    type: component
+    component: 'tailwind:badge'
+    props:
+      variant: neutral
+    slots:
+      content: '21 juillet 2026'

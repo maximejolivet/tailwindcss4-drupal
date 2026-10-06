@@ -1,0 +1,15 @@
+name: Basic
+props:
+  variant: primary
+  heading_level: 2
+slots:
+  title: 'Prêt à démarrer ?'
+  content: 'Parlons de votre projet.'
+  cta:
+    type: component
+    component: 'tailwind:button'
+    props:
+      variant: secondary
+      url: '/contact'
+    slots:
+      content: 'Contact'

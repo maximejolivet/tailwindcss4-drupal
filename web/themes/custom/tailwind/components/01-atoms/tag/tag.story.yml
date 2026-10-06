@@ -1,0 +1,6 @@
+name: Basic
+props:
+  variant: primary
+  removable: true
+slots:
+  content: 'Actualités'

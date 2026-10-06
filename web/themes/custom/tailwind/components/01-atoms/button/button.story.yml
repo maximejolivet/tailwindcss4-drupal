@@ -1,0 +1,7 @@
+name: Basic
+props:
+  variant: primary
+  size: lg
+  url: '/contact'
+slots:
+  content: 'Contactez-nous'

@@ -2,14 +2,12 @@
 theme:
   css:
     layout:
-      dist/css/tailwind.css: { weight: 50, media: "screen" }
+      dist/css/main.css: { weight: 50, media: "screen" }
   js:
     dist/js/theme.js: { }
   dependencies:
-    - core/jquery
-    - core/js-cookie
-    - core/drupal.ajax
-    - core/drupalSettings
+    - core/drupal
+    - core/once
 
 # Vite
 hot-module-replacement:
@@ -17,5 +15,5 @@ hot-module-replacement:
   js:
     # Vite HMR
     /@vite/client: { type: external, attributes: { type: "module" } }
-    # Initial Tailwind CSS
-    /src/css/tailwind.css: { attributes: { type: "module" } }
+    # Initial CSS entrypoint (Tailwind + tokens)
+    /src/css/main.css: { attributes: { type: "module" } }

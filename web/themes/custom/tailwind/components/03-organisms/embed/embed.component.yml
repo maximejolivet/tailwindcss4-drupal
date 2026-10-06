@@ -1,0 +1,16 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Embed
+status: stable
+group: Organisms
+description: 'Wraps third-party embed markup (video, social post) with an optional caption. Does not sanitize its content — the embed slot must come from a restricted text format at the field level, never raw user input.'
+props:
+  type: object
+  properties:
+    caption:
+      type: ['string', 'null']
+      title: Caption
+      default: null
+slots:
+  embed:
+    title: 'Embed markup'
+    description: 'Trusted third-party markup (iframe, script snippet from an oEmbed resource). Source this only from a field using a restricted text format.'

@@ -1,0 +1,17 @@
+{#
+/**
+ * @file
+ * card paragraph — pure mapping onto tailwind:card (variant vertical).
+ * Only ever rendered nested inside a cards_grid paragraph's field_cards.
+ */
+#}
+{% embed 'tailwind:card' with {
+  variant: 'vertical',
+  url: content.field_cta.0 ? content.field_cta.0['#url'].toString() : null,
+  heading_level: 3,
+  attributes: attributes,
+} %}
+  {% block image %}{% if content.field_media %}{{ content.field_media }}{% endif %}{% endblock %}
+  {% block title %}{% if content.field_title %}{{ content.field_title }}{% endif %}{% endblock %}
+  {% block content %}{% if content.field_body %}{{ content.field_body }}{% endif %}{% endblock %}
+{% endembed %}

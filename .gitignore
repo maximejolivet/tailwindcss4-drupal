@@ -16,6 +16,9 @@
 # Ignore Drupal's file directory.
 /web/sites/*/files/
 
+# Ignore configuration sync directory.
+/config/sync/
+
 # Ignore SimpleTest multi-site environment.
 /web/sites/simpletest
 
@@ -28,3 +31,4 @@
 
 /.idea
 *.gz
+.DS_Store

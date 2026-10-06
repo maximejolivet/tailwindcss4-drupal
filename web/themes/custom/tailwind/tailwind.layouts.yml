@@ -1,0 +1,35 @@
+# Layouts for the `section` paragraph type (Layout Paragraphs). Grid via
+# Tailwind classes in each layout--*.html.twig — no CSS files, same rule as
+# components.
+tailwind_onecol:
+  label: '1 colonne'
+  category: 'Tailwind — Sections'
+  template: layouts/onecol/layout--tailwind-onecol
+  default_region: content
+  regions:
+    content:
+      label: Contenu
+
+tailwind_twocol:
+  label: '2 colonnes'
+  category: 'Tailwind — Sections'
+  template: layouts/twocol/layout--tailwind-twocol
+  default_region: first
+  regions:
+    first:
+      label: 'Colonne 1'
+    second:
+      label: 'Colonne 2'
+
+tailwind_threecol:
+  label: '3 colonnes'
+  category: 'Tailwind — Sections'
+  template: layouts/threecol/layout--tailwind-threecol
+  default_region: first
+  regions:
+    first:
+      label: 'Colonne 1'
+    second:
+      label: 'Colonne 2'
+    third:
+      label: 'Colonne 3'

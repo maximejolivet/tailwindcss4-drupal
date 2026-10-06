@@ -1,0 +1,98 @@
+<?php
+
+declare(strict_types=1);
+
+/**
+ * @file
+ * Editorial guardrails and SDC variant synchronisation glue.
+ */
+
+use Drupal\Core\Entity\FieldableEntityInterface;
+use Drupal\Core\Field\FieldStorageDefinitionInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\paragraphs\Entity\Paragraph;
+
+/**
+ * Allowed values callback for the shared field_variant list_string field.
+ *
+ * One field storage (field.storage.paragraph.field_variant.yml) is shared
+ * across every paragraph bundle that has a variant, so the SDC
+ * component.yml `props.*.enum` stays the single source of truth: this
+ * callback maps each bundle to its component's variant list instead of
+ * duplicating the enum in field storage config, which would silently drift
+ * the day someone adds a variant to the Twig without touching this file.
+ *
+ * @see components/03-organisms/hero/hero.component.yml (props.variant)
+ * @see components/03-organisms/cta-banner/cta-banner.component.yml (props.variant)
+ * @see components/03-organisms/cards-grid/cards-grid.component.yml (props.columns)
+ */
+function tailwind_components_variant_allowed_values(FieldStorageDefinitionInterface $definition, ?FieldableEntityInterface $entity = NULL, bool &$cacheable = TRUE): array {
+  $bundle = $entity?->bundle();
+
+  return match ($bundle) {
+    'hero' => [
+      'default' => t('Par défaut'),
+      'centered' => t('Centré'),
+    ],
+    'cta_banner' => [
+      'primary' => t('Primaire'),
+      'secondary' => t('Secondaire'),
+    ],
+    'cards_grid' => [
+      '2' => t('2 colonnes'),
+      '3' => t('3 colonnes'),
+      '4' => t('4 colonnes'),
+    ],
+    default => [],
+  };
+}
+
+/**
+ * Implements hook_form_alter().
+ *
+ * Editorial guardrail: at most one hero paragraph per page (mission
+ * constraint 7e). Layout Paragraphs stores every section/component in the
+ * same flat field_sections value list, so bundle-count limits can't be
+ * expressed as ordinary field cardinality — this is enforced as a
+ * form-level validator instead.
+ *
+ * CAVEAT: this targets the value shape of the classic paragraphs widget
+ * ($form_state->getValue('field_sections') as a list of ['entity' => ...]
+ * deltas). Layout Paragraphs 2.x may expose its working copy through its
+ * own LayoutParagraphsLayout service/temp store rather than plain form
+ * values — verify against the installed module version (see the note in
+ * paragraphs.paragraphs_type.section.yml) and adjust getLayout()/
+ * getParagraphsReferences() access accordingly before relying on this in
+ * production.
+ */
+function tailwind_components_form_alter(array &$form, FormStateInterface $form_state, string $form_id): void {
+  if (!str_starts_with($form_id, 'node_') || !str_ends_with($form_id, '_form')) {
+    return;
+  }
+  if (!isset($form['field_sections'])) {
+    return;
+  }
+  $form['#validate'][] = 'tailwind_components_max_one_hero_validate';
+}
+
+/**
+ * Form validation callback: max one hero paragraph per page.
+ */
+function tailwind_components_max_one_hero_validate(array &$form, FormStateInterface $form_state): void {
+  $values = $form_state->getValue('field_sections');
+  if (!is_array($values)) {
+    return;
+  }
+
+  $hero_count = 0;
+  foreach ($values as $value) {
+    $paragraph = $value['entity'] ?? NULL;
+    if ($paragraph instanceof Paragraph && $paragraph->bundle() === 'hero') {
+      $hero_count++;
+    }
+  }
+
+  if ($hero_count > 1) {
+    $form_state->setErrorByName('field_sections', t("Une page ne peut contenir qu'une seule bannière hero."));
+  }
+}

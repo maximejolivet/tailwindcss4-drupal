@@ -23,6 +23,7 @@
         "drupal/dotenv": "^1.2",
         "drupal/gin": "^5.0",
         "drupal/gin_toolbar": "^3.0",
+        "drupal/layout_paragraphs": "^2.0",
         "drupal/masquerade": "^2.0",
         "drupal/metatag": "^2.2",
         "drupal/paragraphs": "^1.20",

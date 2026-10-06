@@ -1,0 +1,43 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Card
+status: stable
+group: Molecules
+description: 'A content card: image, title, body and footer slots, vertical or horizontal layout.'
+props:
+  type: object
+  properties:
+    variant:
+      type: string
+      title: Variant
+      enum: [vertical, horizontal]
+      default: vertical
+    url:
+      type: ['string', 'null']
+      title: URL
+      description: 'When set, the whole card is clickable (stretched-link pattern) in addition to the title link.'
+      default: null
+    heading_level:
+      type: integer
+      title: 'Title heading level'
+      description: 'Passed through to the internal tailwind:heading — set to match the card''s position in the page outline.'
+      enum: [2, 3, 4, 5, 6]
+      default: 3
+    image_position:
+      type: string
+      title: 'Image position'
+      description: 'Only meaningful when variant is horizontal: which side the image slot renders on.'
+      enum: [start, end]
+      default: start
+slots:
+  image:
+    title: Image
+    description: 'Media element, typically a Drupal responsive image or the picture markup from a media field.'
+  title:
+    title: Title
+    description: 'Card title text (wrapped in tailwind:heading internally).'
+  content:
+    title: Content
+    description: 'Body content/summary.'
+  footer:
+    title: Footer
+    description: 'Meta row or call-to-action, e.g. a date, tags, or a tailwind:button.'

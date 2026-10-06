@@ -25,8 +25,8 @@ export default defineConfig(({mode}) => {
       outDir: "dist", // Output build folder (used instead of default "dist")
       rollupOptions: {
         input: {
-          // Explicit entrypoint for Tailwind CSS (this will include tailwind.css in the build)
-          tailwind: path.resolve(__dirname, 'src/css/tailwind.css'),
+          // Single entrypoint: main.css imports Tailwind, tokens and base styles.
+          main: path.resolve(__dirname, 'src/css/main.css'),
         },
         output: {
           assetFileNames: ({name}) => {

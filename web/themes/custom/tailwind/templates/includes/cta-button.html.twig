@@ -1,0 +1,24 @@
+{#
+/**
+ * @file
+ * Renders a field_cta (Link field) item as a tailwind:button.
+ *
+ * Kept in its own file for the same reason as templates/includes/
+ * heading.html.twig: Drupal's SDC slot validator only misattributes a
+ * nested embed's blocks when the *enclosing file itself* is loaded as a
+ * component (i.e. its own template name matches "namespace:name", like
+ * hero.twig does as tailwind:hero). Paragraph templates aren't components,
+ * so nesting this embed directly in a paragraph--*.html.twig would in
+ * fact be safe — but keeping it here means the same partial is reusable
+ * from both paragraph templates and, if ever needed, component templates
+ * without re-litigating that distinction each time.
+ *
+ * Variables: field_cta (the field's render array), variant (button
+ * variant, defaults to secondary).
+ */
+#}
+{% if field_cta.0 %}
+  {% embed 'tailwind:button' with { variant: variant|default('secondary'), size: 'lg', url: field_cta.0['#url'].toString() } %}
+    {% block content %}{{ field_cta.0['#title'] }}{% endblock %}
+  {% endembed %}
+{% endif %}

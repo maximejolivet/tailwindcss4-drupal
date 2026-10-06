@@ -1,0 +1,28 @@
+{% set alignment = variant == 'centered' ? 'items-center text-center' : 'items-start text-left' %}
+{% set media_content %}{% block media %}{{ media|default('') }}{% endblock %}{% endset %}
+{% set title_content %}{% block title %}{{ title|default('') }}{% endblock %}{% endset %}
+{% set subtitle_content %}{% block subtitle %}{{ subtitle|default('') }}{% endblock %}{% endset %}
+{% set cta_content %}{% block cta %}{{ cta|default('') }}{% endblock %}{% endset %}
+
+<section{{ attributes.addClass('relative overflow-hidden bg-surface-alt') }}>
+  {% if media_content|trim %}
+    <div class="absolute inset-0">
+      {{ media_content }}
+      <div class="absolute inset-0 bg-overlay"></div>
+    </div>
+  {% endif %}
+
+  <div class="relative mx-auto flex max-w-5xl flex-col gap-6 px-5 py-section sm:px-8 xl:px-16 {{ alignment }} {{ media_content|trim ? 'text-text-inverse' : '' }}">
+    {% if title_content|trim %}
+      {% include '@tailwind/includes/heading.html.twig' with { content: title_content, level: heading_level|default(1), size: 'hero' } only %}
+    {% endif %}
+
+    {% if subtitle_content|trim %}
+      <div class="max-w-2xl text-lg {{ media_content|trim ? 'text-text-inverse/90' : 'text-text-muted' }}">{{ subtitle_content }}</div>
+    {% endif %}
+
+    {% if cta_content|trim %}
+      <div class="flex flex-wrap gap-4">{{ cta_content }}</div>
+    {% endif %}
+  </div>
+</section>

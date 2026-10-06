@@ -1,0 +1,19 @@
+name: Basic
+props:
+  variant: default
+  heading_level: 1
+slots:
+  media:
+    type: image
+    uri: 'https://placehold.co/1600x900'
+  title: 'Bienvenue'
+  subtitle: 'Un sous-titre court qui présente la page.'
+  cta:
+    type: component
+    component: 'tailwind:button'
+    props:
+      variant: primary
+      size: lg
+      url: '/contact'
+    slots:
+      content: 'Nous contacter'

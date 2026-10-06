@@ -1,0 +1,14 @@
+{#
+/**
+ * @file
+ * cards_grid paragraph — pure mapping onto tailwind:cards-grid. Each
+ * referenced card paragraph already renders itself through
+ * paragraph--card.html.twig; this template only owns the grid.
+ */
+#}
+{% embed 'tailwind:cards-grid' with {
+  columns: paragraph.field_variant.value ? paragraph.field_variant.value * 1 : 3,
+  attributes: attributes,
+} %}
+  {% block items %}{{ content.field_cards }}{% endblock %}
+{% endembed %}

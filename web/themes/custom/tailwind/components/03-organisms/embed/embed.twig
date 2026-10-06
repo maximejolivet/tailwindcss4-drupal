@@ -1,0 +1,6 @@
+<figure{{ attributes.addClass('overflow-hidden rounded-lg') }}>
+  <div class="w-full">{% block embed %}{{ embed|default('') }}{% endblock %}</div>
+  {% if caption %}
+    <figcaption class="mt-2 text-sm text-text-muted">{{ caption }}</figcaption>
+  {% endif %}
+</figure>

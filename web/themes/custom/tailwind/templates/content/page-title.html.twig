@@ -14,6 +14,10 @@
 #}
 {{ title_prefix }}
 {% if title %}
-  <h1{{ title_attributes.addClass('page-title flex wrapper h1-title my-4') }}>{{ title }}</h1>
+  <div class="px-5 sm:px-8 xl:px-16">
+    {% embed 'tailwind:heading' with { level: 1, size: '3xl', attributes: title_attributes.addClass('page-title my-4') } %}
+      {% block content %}{{ title }}{% endblock %}
+    {% endembed %}
+  </div>
 {% endif %}
 {{ title_suffix }}

@@ -1,0 +1,4 @@
+name: Basic
+props:
+  name: arrow-right
+  size: md

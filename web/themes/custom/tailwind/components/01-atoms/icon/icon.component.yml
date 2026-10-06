@@ -1,0 +1,30 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Icon
+status: stable
+group: Atoms
+description: 'References a symbol from the theme SVG sprite (src/icons/sprite.svg, built to dist/icons/sprite.svg).'
+props:
+  type: object
+  required:
+    - name
+  properties:
+    name:
+      type: string
+      title: Name
+      description: 'Symbol id without the "icon-" prefix, e.g. "arrow-right" for #icon-arrow-right.'
+      enum: [arrow-right, chevron-down, check, close]
+    size:
+      type: string
+      title: Size
+      enum: [sm, md, lg]
+      default: md
+    decorative:
+      type: boolean
+      title: Decorative
+      description: 'True (default) hides the icon from assistive tech via aria-hidden. Set false and provide a label when the icon is the only content conveying meaning (e.g. an icon-only button).'
+      default: true
+    label:
+      type: ['string', 'null']
+      title: Accessible label
+      description: 'Required when decorative is false.'
+      default: null

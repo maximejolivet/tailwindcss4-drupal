@@ -1,0 +1,10 @@
+{% set sizes = {
+  sm: 'size-4',
+  md: 'size-5',
+  lg: 'size-6',
+} %}
+<svg{{ attributes.addClass('inline-block shrink-0', sizes[size|default('md')]) }}
+  {%- if decorative|default(true) %} aria-hidden="true"{% else %} role="img"{% if label %} aria-label="{{ label }}"{% endif %}{% endif -%}
+>
+  <use href="{{ active_theme_path() }}/dist/icons/sprite.svg#icon-{{ name }}"></use>
+</svg>

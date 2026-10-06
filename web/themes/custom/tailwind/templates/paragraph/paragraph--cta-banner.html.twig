@@ -1,0 +1,24 @@
+{#
+/**
+ * @file
+ * cta_banner paragraph — pure mapping onto tailwind:cta-banner.
+ *
+ * See templates/includes/cta-button.html.twig for why field_cta is
+ * unwrapped into a tailwind:button through a separate included file
+ * rather than a nested {% embed %} inlined here.
+ */
+#}
+{% embed 'tailwind:cta-banner' with {
+  variant: paragraph.field_variant.value,
+  heading_level: 2,
+  attributes: attributes,
+} %}
+  {% block title %}{% if content.field_title %}{{ content.field_title }}{% endif %}{% endblock %}
+  {% block content %}{% if content.field_body %}{{ content.field_body }}{% endif %}{% endblock %}
+  {% block cta %}
+    {% include '@tailwind/includes/cta-button.html.twig' with {
+      field_cta: content.field_cta,
+      variant: paragraph.field_variant.value == 'primary' ? 'secondary' : 'primary',
+    } %}
+  {% endblock %}
+{% endembed %}

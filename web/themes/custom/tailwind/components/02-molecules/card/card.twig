@@ -1,0 +1,37 @@
+{% set layout = variant == 'horizontal' ? 'sm:flex ' ~ (image_position|default('start') == 'end' ? 'sm:flex-row-reverse' : 'sm:flex-row') : 'flex flex-col' %}
+{% set image_content %}{% block image %}{{ image|default('') }}{% endblock %}{% endset %}
+{% set title_content %}{% block title %}{{ title|default('') }}{% endblock %}{% endset %}
+{% set content_content %}{% block content %}{{ content|default('') }}{% endblock %}{% endset %}
+{% set footer_content %}{% block footer %}{{ footer|default('') }}{% endblock %}{% endset %}
+
+<div{{ attributes.addClass('relative flex flex-col bg-surface border border-border rounded-lg overflow-hidden', layout) }}>
+  {% if image_content|trim %}
+    <div class="{{ variant == 'horizontal' ? 'sm:w-2/5 shrink-0' : '' }}">
+      {{ image_content }}
+    </div>
+  {% endif %}
+
+  <div class="flex flex-1 flex-col gap-3 p-6">
+    {% if title_content|trim %}
+      {% set title_markup %}
+        {% if url %}
+          <a href="{{ url }}" class="text-text no-underline hover:text-primary">
+            <span class="absolute inset-0" aria-hidden="true"></span>
+            {{ title_content }}
+          </a>
+        {% else %}
+          {{ title_content }}
+        {% endif %}
+      {% endset %}
+      {% include '@tailwind/includes/heading.html.twig' with { content: title_markup, level: heading_level|default(3), size: 'sm' } only %}
+    {% endif %}
+
+    {% if content_content|trim %}
+      <div class="text-text-muted">{{ content_content }}</div>
+    {% endif %}
+
+    {% if footer_content|trim %}
+      <div class="relative z-10 mt-auto pt-3 border-t border-border">{{ footer_content }}</div>
+    {% endif %}
+  </div>
+</div>

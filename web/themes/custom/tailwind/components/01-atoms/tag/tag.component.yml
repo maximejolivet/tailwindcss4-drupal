@@ -1,0 +1,27 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Tag
+status: stable
+group: Atoms
+description: 'An interactive chip: a filter/taxonomy link, optionally removable. For a static status indicator use Badge instead.'
+props:
+  type: object
+  properties:
+    variant:
+      type: string
+      title: Variant
+      enum: [neutral, primary]
+      default: neutral
+    url:
+      type: ['string', 'null']
+      title: URL
+      description: 'When set, the tag renders as an <a> (e.g. a taxonomy term link).'
+      default: null
+    removable:
+      type: boolean
+      title: Removable
+      description: 'Appends a close icon. Purely visual — wire up the remove behaviour (e.g. a form submit) at the call site.'
+      default: false
+slots:
+  content:
+    title: Content
+    description: 'Tag label.'

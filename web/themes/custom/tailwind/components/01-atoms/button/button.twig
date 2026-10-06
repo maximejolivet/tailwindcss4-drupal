@@ -1,0 +1,36 @@
+{#
+  Every {% block slotname %} below falls back to `{{ slotname|default('') }}`.
+  Drupal's real {% embed %}+{% block %} override never evaluates this
+  default body, but storybook-addon-sdc renders slots as plain context
+  variables (no block override at all) — the fallback is what makes the
+  same template work in both. See docs/prompts/DRUPAL-PROCESS.md.
+#}
+{% set variants = {
+  primary: 'bg-primary text-white hover:bg-primary-hover',
+  secondary: 'bg-transparent border border-primary text-primary hover:bg-primary hover:text-white',
+  ghost: 'bg-transparent text-primary hover:bg-surface-alt',
+} %}
+{% set sizes = {
+  sm: 'text-sm px-3 py-1.5 gap-1.5',
+  md: 'text-base px-4 py-2 gap-2',
+  lg: 'text-lg px-6 py-3 gap-2.5',
+} %}
+{% set classes = [
+  'inline-flex items-center justify-center rounded-md font-semibold no-underline transition-colors duration-150 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary disabled:opacity-50 disabled:cursor-not-allowed',
+  variants[variant|default('primary')],
+  sizes[size|default('md')],
+] %}
+
+{% if url %}
+  <a
+    href="{{ disabled ? '#0' : url }}"
+    {{ attributes.addClass(classes) }}
+    {%- if disabled %} aria-disabled="true" tabindex="-1"{% endif -%}
+  >{% block content %}{{ content|default('') }}{% endblock %}</a>
+{% else %}
+  <button
+    type="{{ type|default('button') }}"
+    {{ attributes.addClass(classes) }}
+    {%- if disabled %} disabled{% endif -%}
+  >{{ block('content') }}</button>
+{% endif %}

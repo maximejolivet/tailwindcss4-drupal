@@ -1,0 +1,32 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Hero
+status: stable
+group: Organisms
+description: 'Page/section banner: title, subtitle, optional background media and call-to-action row.'
+props:
+  type: object
+  properties:
+    variant:
+      type: string
+      title: Variant
+      enum: [default, centered]
+      default: default
+    heading_level:
+      type: integer
+      title: 'Title heading level'
+      description: 'Use 1 only for the page''s single hero; use 2 when the hero is a section within a longer page. Enforced editorially to max 1 h1 hero per page — see paragraph_type.hero README.'
+      enum: [1, 2]
+      default: 1
+slots:
+  title:
+    title: Title
+    description: 'Hero title (wrapped in tailwind:heading).'
+  subtitle:
+    title: Subtitle
+    description: 'Supporting text below the title.'
+  media:
+    title: Media
+    description: 'Optional background media (image/video markup). Adds a scrim overlay and switches text to the inverse color token.'
+  cta:
+    title: 'Calls to action'
+    description: 'One or more tailwind:button components.'

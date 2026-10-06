@@ -1,0 +1,18 @@
+{#
+/**
+ * @file
+ * Override for the body field: wraps WYSIWYG output in `.prose`.
+ *
+ * This is the only field template in the theme allowed to rely on a
+ * @tailwindcss/typography-generated class instead of component markup —
+ * editorial rich text can't be wrapped in per-tag Tailwind classes the way
+ * component slots are, since its structure isn't known ahead of time.
+ *
+ * @see main.css — @layer components .prose (the one @apply exception)
+ */
+#}
+<div{{ attributes.addClass('field', 'field--name-' ~ field_name|clean_class) }}>
+  {% for item in items %}
+    <div class="prose">{{ item.content }}</div>
+  {% endfor %}
+</div>

@@ -1,0 +1,30 @@
+{#
+/**
+ * @file
+ * Article teaser — pure mapping onto the tailwind:card component.
+ *
+ * No structural HTML here (mission constraint 7c applies to node templates
+ * the same way it applies to paragraph templates): if the card can't express
+ * something an article teaser needs, fix components/02-molecules/card, don't
+ * add markup around this embed.
+ *
+ * @see \Drupal\node\NodeViewBuilder
+ */
+#}
+{% embed 'tailwind:card' with {
+  variant: 'horizontal',
+  url: url,
+  heading_level: 2,
+  attributes: attributes.addClass(['node', 'node--type-' ~ node.bundle|clean_class, 'node--view-mode-teaser']),
+} %}
+  {% block image %}
+    {% if content.field_image %}{{ content.field_image }}{% endif %}
+  {% endblock %}
+  {% block title %}{{ label }}{% endblock %}
+  {% block content %}
+    {% if content.body %}{{ content.body }}{% endif %}
+  {% endblock %}
+  {% block footer %}
+    {% if date %}<span class="text-sm text-text-muted">{{ date }}</span>{% endif %}
+  {% endblock %}
+{% endembed %}

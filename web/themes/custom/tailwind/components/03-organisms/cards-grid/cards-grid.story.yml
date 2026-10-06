@@ -1,0 +1,44 @@
+name: Basic
+props:
+  columns: 3
+slots:
+  items:
+    - type: component
+      component: 'tailwind:card'
+      props:
+        variant: vertical
+        heading_level: 3
+      slots:
+        image:
+          type: image
+          uri: 'https://placehold.co/600x400'
+          attributes:
+            class: 'h-48 w-full object-cover'
+        title: 'Carte une'
+        content: 'Contenu de la carte une.'
+    - type: component
+      component: 'tailwind:card'
+      props:
+        variant: vertical
+        heading_level: 3
+      slots:
+        image:
+          type: image
+          uri: 'https://placehold.co/600x400'
+          attributes:
+            class: 'h-48 w-full object-cover'
+        title: 'Carte deux'
+        content: 'Contenu de la carte deux.'
+    - type: component
+      component: 'tailwind:card'
+      props:
+        variant: vertical
+        heading_level: 3
+      slots:
+        image:
+          type: image
+          uri: 'https://placehold.co/600x400'
+          attributes:
+            class: 'h-48 w-full object-cover'
+        title: 'Carte trois'
+        content: 'Contenu de la carte trois.'

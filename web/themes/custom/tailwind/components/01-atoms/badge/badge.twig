@@ -1,0 +1,13 @@
+{% set variants = {
+  neutral: 'bg-surface-alt text-text-muted',
+  primary: 'bg-primary text-white',
+  success: 'bg-success-surface text-success',
+  warning: 'bg-warning-surface text-warning',
+  danger: 'bg-danger-surface text-danger',
+  info: 'bg-info-surface text-info',
+} %}
+{% set sizes = {
+  sm: 'text-xs px-2 py-0.5',
+  md: 'text-sm px-2.5 py-1',
+} %}
+<span{{ attributes.addClass('inline-flex items-center rounded-full font-medium', variants[variant|default('neutral')], sizes[size|default('md')]) }}>{% block content %}{{ content|default('') }}{% endblock %}</span>

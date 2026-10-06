@@ -1,0 +1,80 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+/* Explicit sources: Tailwind v4 auto-detects files next to this one, but SDC
+   components and their JS live in components/ at the theme root, one level
+   above src/, which sits outside the automatic heuristics scanning root. */
+@source '../../components/**/*.twig';
+@source '../../components/**/*.js';
+@source '../../templates/**/*.twig';
+@source '../../layouts/**/*.twig';
+
+@import './base/base.css';
+
+/*
+ * Design tokens — the single point of customisation between agency
+ * projects. Every project reskins by editing the values below; component
+ * markup (Twig + Tailwind classes) never changes. Arbitrary values `[...]`
+ * are forbidden in components for exactly this reason: they bypass tokens
+ * and can't be reskinned centrally.
+ */
+@theme {
+  /* Colors — semantic, not literal. Never "blue", always the role it plays. */
+  --color-*: initial;
+  --color-primary: oklch(0.488 0.217 264.376);
+  --color-primary-hover: oklch(0.42 0.217 264.376);
+  --color-secondary: oklch(0.769 0.165 70.08);
+  --color-secondary-hover: oklch(0.7 0.165 70.08);
+
+  --color-surface: oklch(1 0 0);
+  --color-surface-alt: oklch(0.98 0 0);
+  --color-surface-inverse: oklch(0.18 0 0);
+
+  --color-text: oklch(0.18 0 0);
+  --color-text-muted: oklch(0.44 0 0);
+  --color-text-inverse: oklch(1 0 0);
+
+  --color-border: oklch(0.89 0 0);
+  --color-border-strong: oklch(0.62 0 0);
+
+  --color-overlay: oklch(0.18 0 0 / 30%);
+
+  --color-success: oklch(0.52 0.1313 145.93);
+  --color-success-surface: oklch(0.97 0.0538 149.27);
+  --color-warning: oklch(0.67 0.1648 55.31);
+  --color-warning-surface: oklch(0.97 0.0305 81.76);
+  --color-danger: oklch(0.57 0.2335 29.01);
+  --color-danger-surface: oklch(0.95 0.0265 23.36);
+  --color-info: oklch(0.55 0.179255 254.7525);
+  --color-info-surface: oklch(0.97 0.0209 227.52);
+
+  /* Fonts */
+  --font-*: initial;
+  --font-base: 'Luciole', sans-serif;
+
+  /* Radius scale — components pick from this, never an arbitrary value. */
+  --radius-*: initial;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-full: 9999px;
+
+  /* Spacing extends (not replaces) the default Tailwind scale so `p-4`,
+     `gap-2`, etc. keep working; only add project-specific steps here. */
+  --spacing-section: 5rem;
+}
+
+/*
+ * prose — the one place @apply is tolerated (mission constraint #9).
+ * WYSIWYG body fields are free-form editorial HTML that no component can
+ * wrap in Tailwind classes, so typography plugin + a thin @apply layer is
+ * the pragmatic exception.
+ */
+@layer components {
+  .prose {
+    @apply max-w-none text-text;
+  }
+  .prose a {
+    @apply text-primary hover:text-primary-hover;
+  }
+}

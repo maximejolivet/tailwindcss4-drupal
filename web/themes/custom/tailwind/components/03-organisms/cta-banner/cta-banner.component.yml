@@ -1,0 +1,27 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: 'CTA banner'
+status: stable
+group: Organisms
+description: 'A centered call-to-action block on a solid background — title, supporting text, one or more buttons.'
+props:
+  type: object
+  properties:
+    variant:
+      type: string
+      title: Variant
+      enum: [primary, secondary]
+      default: primary
+    heading_level:
+      type: integer
+      title: 'Title heading level'
+      enum: [2, 3]
+      default: 2
+slots:
+  title:
+    title: Title
+  content:
+    title: Content
+    description: 'Supporting text.'
+  cta:
+    title: 'Calls to action'
+    description: 'One or more tailwind:button components.'

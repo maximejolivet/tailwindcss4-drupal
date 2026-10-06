@@ -1,0 +1,25 @@
+{% set sizes = {
+  xs: 'text-lg',
+  sm: 'text-xl',
+  md: 'text-2xl',
+  lg: 'text-3xl',
+  xl: 'text-4xl',
+  '2xl': 'text-5xl',
+  '3xl': 'text-6xl lg:text-7xl',
+  hero: 'text-6xl lg:text-8xl',
+} %}
+{% set classes = ['font-base font-semibold text-text tracking-tight', sizes[size|default('md')]] %}
+
+{% if level == 1 %}
+  <h1{{ attributes.addClass(classes) }}>{% block content %}{{ content|default('') }}{% endblock %}</h1>
+{% elseif level == 2 %}
+  <h2{{ attributes.addClass(classes) }}>{{ block('content') }}</h2>
+{% elseif level == 3 %}
+  <h3{{ attributes.addClass(classes) }}>{{ block('content') }}</h3>
+{% elseif level == 4 %}
+  <h4{{ attributes.addClass(classes) }}>{{ block('content') }}</h4>
+{% elseif level == 5 %}
+  <h5{{ attributes.addClass(classes) }}>{{ block('content') }}</h5>
+{% else %}
+  <h6{{ attributes.addClass(classes) }}>{{ block('content') }}</h6>
+{% endif %}

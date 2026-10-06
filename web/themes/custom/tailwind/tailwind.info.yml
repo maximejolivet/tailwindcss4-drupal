@@ -1,8 +1,13 @@
 name: Tailwind
 type: theme
-description: "A Vite, TailwindCSS 4 & Drupal theme"
+description: "A Vite, TailwindCSS 4 & Drupal theme, built around Single Directory Components"
 base theme: false
 core_version_requirement: ^10 || ^11
+
+# Fail loudly instead of silently ignoring bad markup when a component's
+# props/slots don't match its usage. Every component in components/ ships a
+# full JSON Schema, so there is never a legitimate reason for this to be off.
+enforce_prop_schemas: true
 
 libraries:
   - tailwind/theme

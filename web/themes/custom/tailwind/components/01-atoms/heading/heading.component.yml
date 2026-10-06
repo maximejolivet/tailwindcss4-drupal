@@ -1,0 +1,25 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Heading
+status: stable
+group: Atoms
+description: 'A semantic heading (h1–h6) whose visual size is decoupled from its level — pick level for document outline, size for how it should look.'
+props:
+  type: object
+  required:
+    - level
+  properties:
+    level:
+      type: integer
+      title: Level
+      description: 'Semantic heading level. Drives document outline and accessibility, not appearance.'
+      enum: [1, 2, 3, 4, 5, 6]
+    size:
+      type: string
+      title: Size
+      description: 'Visual size, independent of level.'
+      enum: [xs, sm, md, lg, xl, 2xl, 3xl, hero]
+      default: md
+slots:
+  content:
+    title: Content
+    description: 'The heading text.'

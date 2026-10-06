@@ -1,0 +1,22 @@
+{#
+/**
+ * @file
+ * Embeds tailwind:heading with a `content` block, in its own file.
+ *
+ * Drupal's SDC slot validator (Drupal\Core\Template\ComponentNodeVisitor)
+ * collects every {% block %} tag found anywhere in a component's own
+ * compiled .twig file — including ones nested inside that component's
+ * internal {% embed %} of a *different* component — and checks all of
+ * them against that OUTER component's declared slots. A component like
+ * tailwind:hero that has no "content" slot of its own would fail to
+ * compile if it embedded tailwind:heading (slot: content) directly in
+ * hero.twig. Loading the heading embed through this separate, non-SDC
+ * include file avoids the collision: this file isn't itself a component,
+ * so its blocks are never checked against anything.
+ *
+ * Variables: content (heading markup/text), level, size.
+ */
+#}
+{% embed 'tailwind:heading' with { level: level, size: size } %}
+  {% block content %}{{ content }}{% endblock %}
+{% endembed %}

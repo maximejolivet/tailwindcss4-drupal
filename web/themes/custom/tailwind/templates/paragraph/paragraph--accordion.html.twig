@@ -1,0 +1,11 @@
+{#
+/**
+ * @file
+ * accordion paragraph — pure mapping onto tailwind:accordion. Each
+ * referenced accordion_item paragraph renders itself through
+ * paragraph--accordion-item.html.twig.
+ */
+#}
+{% embed 'tailwind:accordion' with { attributes: attributes } %}
+  {% block items %}{{ content.field_items }}{% endblock %}
+{% endembed %}

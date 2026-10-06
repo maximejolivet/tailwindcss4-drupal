@@ -1,0 +1,8 @@
+name: Basic
+props:
+  caption: 'Source : YouTube'
+slots:
+  embed:
+    type: element
+    tag: 'div'
+    value: '<iframe width="100%" height="360" src="about:blank" title="Vidéo" allowfullscreen></iframe>'

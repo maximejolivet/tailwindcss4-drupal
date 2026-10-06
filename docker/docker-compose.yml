@@ -50,6 +50,7 @@ services:
       - .env
     ports:
       - '3009:3009'
+      - '6006:6006'
     command: tail -f /dev/null
     networks:
       - drupal

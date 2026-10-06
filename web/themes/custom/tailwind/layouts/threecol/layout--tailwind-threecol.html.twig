@@ -1,0 +1,15 @@
+{#
+/**
+ * @file
+ * 3-column section layout.
+ *
+ * @see \Drupal\Core\Layout\LayoutDefault
+ */
+#}
+<div{{ attributes.addClass('layout px-5 py-8 sm:px-8 xl:px-16') }}>
+  <div class="mx-auto grid max-w-5xl grid-cols-1 gap-8 md:grid-cols-3">
+    <div class="layout__region layout__region--first">{{ content.first }}</div>
+    <div class="layout__region layout__region--second">{{ content.second }}</div>
+    <div class="layout__region layout__region--third">{{ content.third }}</div>
+  </div>
+</div>

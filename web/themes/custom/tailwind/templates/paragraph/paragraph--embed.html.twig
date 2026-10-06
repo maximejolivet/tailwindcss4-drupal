@@ -1,0 +1,17 @@
+{#
+/**
+ * @file
+ * embed paragraph — pure mapping onto tailwind:embed.
+ *
+ * field_embed_code MUST use a restricted text format (see
+ * field.field.paragraph.embed.field_embed_code.yml and
+ * components/03-organisms/embed/README.md) — content.field_embed_code is
+ * printed as already-filtered, trusted markup.
+ */
+#}
+{% embed 'tailwind:embed' with {
+  caption: paragraph.field_caption.value,
+  attributes: attributes,
+} %}
+  {% block embed %}{{ content.field_embed_code }}{% endblock %}
+{% endembed %}

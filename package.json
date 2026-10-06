@@ -7,6 +7,8 @@
   "scripts": {
     "package": "npm --prefix ./web/themes/custom/tailwind i",
     "dev": "npm --prefix ./web/themes/custom/tailwind run dev",
-    "build": "npm --prefix ./web/themes/custom/tailwind run build"
+    "build": "npm --prefix ./web/themes/custom/tailwind run build",
+    "storybook": "npm --prefix ./web/themes/custom/tailwind run storybook",
+    "build-storybook": "npm --prefix ./web/themes/custom/tailwind run build-storybook"
   }
 }

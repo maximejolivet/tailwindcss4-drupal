@@ -1,0 +1,28 @@
+{#
+/**
+ * @file
+ * Hero paragraph — pure mapping onto tailwind:hero (mission constraint 7c:
+ * zero structural HTML here; if something is missing, fix the component).
+ *
+ * heading_level is always 1: the "max one hero per page" editorial
+ * guardrail (tailwind_components_max_one_hero_validate()) guarantees a hero
+ * is always the page's single h1.
+ *
+ * field_cta (a Link field) is unwrapped into a tailwind:button via
+ * templates/includes/cta-button.html.twig rather than printed via its own
+ * field formatter, because "a link field" and "a button-styled call to
+ * action" are different concerns — the component is the source of truth
+ * for CTA styling, the field is only data. See that file for why it's a
+ * separate include rather than inlined here.
+ */
+#}
+{% embed 'tailwind:hero' with {
+  variant: paragraph.field_variant.value,
+  heading_level: 1,
+  attributes: attributes,
+} %}
+  {% block title %}{% if content.field_title %}{{ content.field_title }}{% endif %}{% endblock %}
+  {% block subtitle %}{% if content.field_subtitle %}{{ content.field_subtitle }}{% endif %}{% endblock %}
+  {% block media %}{% if content.field_media %}{{ content.field_media }}{% endif %}{% endblock %}
+  {% block cta %}{% include '@tailwind/includes/cta-button.html.twig' with { field_cta: content.field_cta, variant: 'secondary' } %}{% endblock %}
+{% endembed %}

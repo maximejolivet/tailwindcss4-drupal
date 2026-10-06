@@ -1,0 +1,22 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Badge
+status: stable
+group: Atoms
+description: 'A small static status indicator (count, state, label). Not interactive — use Tag for clickable/removable chips.'
+props:
+  type: object
+  properties:
+    variant:
+      type: string
+      title: Variant
+      enum: [neutral, primary, success, warning, danger, info]
+      default: neutral
+    size:
+      type: string
+      title: Size
+      enum: [sm, md]
+      default: md
+slots:
+  content:
+    title: Content
+    description: 'Badge text or count.'

@@ -1,0 +1,21 @@
+{% set variants = {
+  primary: 'bg-primary text-white',
+  secondary: 'bg-surface-alt text-text',
+} %}
+{% set title_content %}{% block title %}{{ title|default('') }}{% endblock %}{% endset %}
+{% set body_content %}{% block content %}{{ content|default('') }}{% endblock %}{% endset %}
+{% set cta_content %}{% block cta %}{{ cta|default('') }}{% endblock %}{% endset %}
+
+<section{{ attributes.addClass('rounded-lg px-6 py-10 sm:px-10', variants[variant|default('primary')]) }}>
+  <div class="mx-auto flex max-w-3xl flex-col items-center gap-4 text-center">
+    {% if title_content|trim %}
+      {% include '@tailwind/includes/heading.html.twig' with { content: title_content, level: heading_level|default(2), size: 'lg' } only %}
+    {% endif %}
+    {% if body_content|trim %}
+      <div class="{{ variant == 'secondary' ? 'text-text-muted' : 'text-white/90' }}">{{ body_content }}</div>
+    {% endif %}
+    {% if cta_content|trim %}
+      <div class="flex flex-wrap justify-center gap-4">{{ cta_content }}</div>
+    {% endif %}
+  </div>
+</section>

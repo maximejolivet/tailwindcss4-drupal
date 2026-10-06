@@ -1,0 +1,38 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: Button
+status: stable
+group: Atoms
+description: 'A call-to-action rendered as a <button>, or as an <a> when a url is given, both styled identically.'
+props:
+  type: object
+  properties:
+    variant:
+      type: string
+      title: Variant
+      description: 'Visual style of the button.'
+      enum: [primary, secondary, ghost]
+      default: primary
+    size:
+      type: string
+      title: Size
+      enum: [sm, md, lg]
+      default: md
+    url:
+      type: ['string', 'null']
+      title: URL
+      description: 'When set, the button renders as an <a> pointing to this URL instead of a <button>.'
+      default: null
+    type:
+      type: string
+      title: 'HTML button type'
+      description: 'Ignored when url is set.'
+      enum: [button, submit, reset]
+      default: button
+    disabled:
+      type: boolean
+      title: Disabled
+      default: false
+slots:
+  content:
+    title: Label
+    description: 'The visible label of the button (text, optionally with an inlined icon component).'

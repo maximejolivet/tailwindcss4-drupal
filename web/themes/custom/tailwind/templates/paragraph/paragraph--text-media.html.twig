@@ -1,0 +1,17 @@
+{#
+/**
+ * @file
+ * text_media paragraph — pure mapping onto tailwind:card (variant
+ * horizontal). See mission constraint 7c.
+ */
+#}
+{% embed 'tailwind:card' with {
+  variant: 'horizontal',
+  image_position: paragraph.field_position.value,
+  heading_level: 2,
+  attributes: attributes,
+} %}
+  {% block image %}{% if content.field_media %}{{ content.field_media }}{% endif %}{% endblock %}
+  {% block title %}{% if content.field_title %}{{ content.field_title }}{% endif %}{% endblock %}
+  {% block content %}{% if content.field_body %}{{ content.field_body }}{% endif %}{% endblock %}
+{% endembed %}

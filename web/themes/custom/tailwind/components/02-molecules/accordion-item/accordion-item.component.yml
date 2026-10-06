@@ -1,0 +1,15 @@
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+name: 'Accordion item'
+status: stable
+group: Molecules
+description: 'A single disclosure entry, built on native <details>/<summary> — no JS required, keyboard and screen-reader accessible by default.'
+props:
+  type: object
+  properties: {  }
+slots:
+  title:
+    title: Title
+    description: 'Always-visible summary text.'
+  content:
+    title: Content
+    description: 'Revealed when expanded.'

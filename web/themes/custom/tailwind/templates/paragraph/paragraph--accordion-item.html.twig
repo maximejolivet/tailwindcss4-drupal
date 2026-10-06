@@ -1,0 +1,11 @@
+{#
+/**
+ * @file
+ * accordion_item paragraph — pure mapping onto tailwind:accordion-item.
+ * Only ever rendered nested inside an accordion paragraph's field_items.
+ */
+#}
+{% embed 'tailwind:accordion-item' with { attributes: attributes } %}
+  {% block title %}{{ content.field_title }}{% endblock %}
+  {% block content %}{{ content.field_body }}{% endblock %}
+{% endembed %}

@@ -1,0 +1,58 @@
+name: Theme frontend
+
+on:
+  push:
+    paths:
+      - 'web/themes/custom/tailwind/**'
+      - '.github/workflows/theme-frontend.yml'
+  pull_request:
+    paths:
+      - 'web/themes/custom/tailwind/**'
+      - '.github/workflows/theme-frontend.yml'
+
+defaults:
+  run:
+    working-directory: web/themes/custom/tailwind
+
+env:
+  # Keep in sync with mission constraint 9 ("échec si le CSS généré dépasse
+  # 50 Ko gzippé"). Checked against dist/css/main.css after build below.
+  MAX_CSS_GZIP_KB: 50
+
+jobs:
+  build-and-validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: web/themes/custom/tailwind/package-lock.json
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Validate component YAML schemas
+        run: npm run lint:components
+
+      - name: Lint JS
+        run: npm run lint:js
+
+      - name: Check formatting
+        run: npm run prettier:check
+
+      - name: Build (production)
+        run: npm run build
+
+      - name: Enforce CSS gzip budget
+        run: |
+          set -euo pipefail
+          size=$(gzip -c dist/css/main.css | wc -c)
+          limit=$((MAX_CSS_GZIP_KB * 1024))
+          echo "dist/css/main.css gzipped: $((size / 1024)) KB (limit: ${MAX_CSS_GZIP_KB} KB)"
+          if [ "$size" -gt "$limit" ]; then
+            echo "::error::Compiled CSS exceeds the ${MAX_CSS_GZIP_KB}KB gzip budget."
+            exit 1
+          fi

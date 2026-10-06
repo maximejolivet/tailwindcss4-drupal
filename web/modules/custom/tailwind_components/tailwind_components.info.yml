@@ -1,0 +1,8 @@
+name: 'Tailwind Components Glue'
+type: module
+description: 'Editorial guardrails and SDC variant synchronisation for the Tailwind theme''s paragraph-based page builder.'
+package: Custom
+core_version_requirement: ^10 || ^11
+dependencies:
+  - paragraphs:paragraphs
+  - drupal:node
